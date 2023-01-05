@@ -49,9 +49,9 @@ section{
 }
 
 .testoB{
-  color: blueviolet;
-  height: 45px;
-    
+  color: #FFBC42;
+  font-weight: bold;
+  margin-left: 10px;
 }
 
 #scritta{
