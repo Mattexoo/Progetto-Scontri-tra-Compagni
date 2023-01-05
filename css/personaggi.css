@@ -3,9 +3,17 @@ html, body{
   width: 100%;
   margin: 0px;
 }
+
+body{
+  margin: 0px;
+  background-image: url("../img/sfondoPersonaggi.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  zoom: 90%;
+}
+
 header{
   color:aqua;
-  
 }
 
 

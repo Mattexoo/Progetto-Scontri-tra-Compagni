@@ -1,0 +1,43 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img{
+    margin: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+#Personaggi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imgPrincipali{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#ritorno{
+    background-color: green;
+    height: 75px;
+    width: 125px;
+    border-radius: 51%;
+    top: 25 px;
+    right: 0px;
+    cursor: pointer;
+  }

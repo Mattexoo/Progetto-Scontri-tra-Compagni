@@ -4,6 +4,12 @@ html, body{
   margin: 0px;
 }
 
+body{
+  background-image: url("../img/arena.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .title{
   display: flex;
   flex-direction: row;
