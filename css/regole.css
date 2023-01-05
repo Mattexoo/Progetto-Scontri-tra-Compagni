@@ -1,0 +1,39 @@
+html, body{
+  margin: 0;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Cregole{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 3px black;
+  border-radius: 20px;
+}
+
+div{
+  margin: 10px;
+}
+
+#ritorno{
+  background-color: green;
+  height: 100px;
+  width: 150px;
+  border-radius: 51%;
+  top: 25 px;
+  right: 0px;
+}

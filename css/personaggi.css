@@ -1,0 +1,139 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+header{
+  color:aqua;
+  
+}
+
+
+main{
+  margin-top: 150px;
+}
+#immaginiUp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia;
+}
+
+#schermi{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin-top: 100px; 
+
+}
+
+#schermo1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 3px black;
+}
+
+#schermo2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 3px black;
+}
+
+.selezioneP{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.imgP > img{
+  position: relative;
+  z-index: 0;
+  margin: 10px;
+  height: 70px;
+  width: 70px;
+}
+
+.imgP > img:hover{
+  position: relative;
+  z-index: 2;
+  animation: zoom 1s infinite ;
+}
+
+#sceltaAvvenuta{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+#btnsceltaAvvenuta{
+  background-color: green;
+  border-radius: 10px;
+  margin-top:170px ;
+  height: 100px;
+  width: 250px;
+}
+
+
+
+@keyframes zoom{
+  0%{
+    z-index: 2;
+    height: 70px;
+    width: 70px;
+    
+  }
+  15%{
+    z-index: 2;
+    height: 73px;
+    width: 73px;
+    
+  }
+  
+  30%{
+    z-index: 2;
+    height: 78px;
+    width: 78px;
+    
+  }
+  45%{
+    z-index: 2;
+    height: 82px;
+    width: 82px;
+    
+  }
+  60%{
+    z-index: 2;
+    height: 78px;
+    width: 78px;
+    
+  }
+  80%{
+    z-index: 2;
+    height: 73px;
+    width: 73px;
+    
+  }
+  100%{
+    z-index: 2;
+    height: 70px;
+    width: 70px;
+    
+  }
+  
+}

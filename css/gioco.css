@@ -1,0 +1,66 @@
+html, body{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-family: Georgia;
+}
+
+#immaginiUp{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#schermi{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+#schermo1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 3px black;
+}
+
+#turno{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Georgia;
+}
+
+#schermo2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: solid 3px black;
+}
+
+.lifebar{
+  display: flex;
+  justify-content: flex-start;
+  width: 275px;
+  height: 100px;
+}
+
+.mosse{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  
+}
