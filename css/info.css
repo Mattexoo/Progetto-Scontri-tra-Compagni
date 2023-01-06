@@ -4,11 +4,24 @@ html, body{
     margin: 0px;
 }
 
+body{
+    background-image: url("../img/sfondoDescrizioni.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 header{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: white;
+}
+header > div{
+    border: solid 3px black;
+    border-radius: 20px;
+    background-color: #715AFF;
+    padding: 10px;
 }
 
 img{
@@ -30,6 +43,7 @@ img{
     justify-content: center;
     flex-direction: row;
     margin: 10px;
+    color: white;
 }
 
 #ritorno{
