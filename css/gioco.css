@@ -12,7 +12,7 @@ body{
 
 .title{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   font-family: Georgia;
@@ -29,7 +29,6 @@ body{
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  margin-top: 50px;
 }
 
 #schermo1{
@@ -63,10 +62,25 @@ body{
   height: 100px;
 }
 
+button :hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 .mosse{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
+}
+
+.mossa{
+  margin: 10px;
+  height: 25px;
+  width: 80px;
   cursor: pointer;
+}
+
+.ulti{
+    opacity: 0.6; 
+    cursor: not-allowed;
 }
