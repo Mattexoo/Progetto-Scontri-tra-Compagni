@@ -91,7 +91,10 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
+  height: 150px;
+  width: 300px;
 }
+
 #colpo{
   position:absolute;
   z-index: 20;
@@ -106,10 +109,21 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
+  height: 150px;
+  width: 300px;
 }
 
-#attacco1fulmine :focus {
- display: block;
+#ulti2:focus + #spada{
+  display: block;
+}
+#ulti1:focus + #pugno{
+  display: block;
+}
+#attacco1:focus + #fulmine{
+  display: block;
+}
+#attacco2:focus + #colpo{
+  display: block;
 }
 
 
