@@ -113,9 +113,14 @@ button:hover{
   width: 300px;
 }
 #scudo1{
+  position:absolute;
+  z-index: 20;
   display: none;
+  background-position-x: center;
 }
 #scudo2{
+  position:absolute;
+  z-index: 20;
   display: none;
 }
 
