@@ -151,6 +151,50 @@ main{
   
 }
 
+@media screen and (max-width: 1024px){
+
+  #btnsceltaAvvenuta{
+    background-color: green;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 95px;
+    width: 300px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  main{
+    margin: 0px;
+  }
+
+}
+
+@media screen and (max-width: 850px){
+
+  #btnsceltaAvvenuta{
+    background-color: green;
+    border-radius: 10px;
+    margin-top: 10px;
+    height: 95px;
+    width: 300px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #schermi{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  main{
+    margin: 0px;
+  }
+
+}
+
 @media screen and (max-width: 768px){
 
   body{
