@@ -116,7 +116,6 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
-  background-position-x: center;
 }
 #scudo2{
   position:absolute;
