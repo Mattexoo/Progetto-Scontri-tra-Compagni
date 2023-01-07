@@ -136,7 +136,7 @@ button:hover{
 #difesa1:focus + #scudo1{
   display: block;
   left: 23%;
-  top: 20%;
+  top: 14%;
   animation: scudo1 3s linear;
 }
 /* Gundam*/
@@ -154,41 +154,41 @@ button:hover{
 
 @keyframes scudo1{ 
   0%{   
-    left: 20%;
+    left: 21.5%;
     top: 40%;   
     height: 50px;
     width: 20px;       
   }
   15%{
-    left: 20.5%;
+    left: 21.8%;
     top: 39%;
     height: 100px;
     width: 40px;  
         
   }  
   30%{
-    left: 21%;
+    left: 22%;
     top: 35%;
     height: 150px;
     width: 60px;
         
   }
   45%{
-    left: 21.5%;
+    left: 22.4%;
     top: 30%;  
     height: 300px;
     width: 120px;
         
   }
   60%{
-    left: 22%;
+    left: 22.7%;
     top: 25%;    
     height: 400px;
     width: 200px;
         
   }
   80%{
-    left: 22.5%;
+    left: 22.9%;
     top: 23%;   
     height: 500px;
     width: 300px; 
@@ -196,8 +196,8 @@ button:hover{
   }
   100%{
     left: 23%;
-    top: 20%;   
-    height: 650px;
+    top: 18%;   
+    height: 550px;
     width: 400px;
         
   }   
@@ -205,48 +205,48 @@ button:hover{
 
 @keyframes scudo2{ 
   0%{   
-    left: 20%;
+    right: 20%;
     top: 40%;   
     height: 50px;
     width: 20px;       
   }
   15%{
-    left: 20.5%;
+    right: 20.5%;
     top: 39%;
     height: 100px;
     width: 40px;  
         
   }  
   30%{
-    left: 21%;
+    right: 21%;
     top: 35%;
     height: 150px;
     width: 60px;
         
   }
   45%{
-    left: 21.5%;
+    right: 21.5%;
     top: 30%;  
     height: 300px;
     width: 120px;
         
   }
   60%{
-    left: 22%;
+    right: 22%;
     top: 25%;    
     height: 400px;
     width: 200px;
         
   }
   80%{
-    left: 22.5%;
+    right: 22.5%;
     top: 23%;   
     height: 500px;
     width: 300px; 
         
   }
   100%{
-    left: 23%;
+    right: 23%;
     top: 20%;   
     height: 650px;
     width: 400px;
