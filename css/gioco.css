@@ -155,20 +155,20 @@ button:hover{
 @keyframes scudo1{ 
   0%{   
     left: 400px;
-    top: 200px;   
+    top: 350px;   
     height: 20px;
     width: 20px;       
   }
   15%{
     left: 400px;
-    top: 200px;
+    top: 300px;
     height: 100px;
     width: 40px;  
         
   }  
   30%{
     left: 400px;
-    top: 200px;
+    top: 250px;
     height: 200px;
     width: 60px;
         
