@@ -1,7 +1,6 @@
 html, body{
   height: 100%;
   width: 100%;
-  margin: 0px;
 }
 
 body{
@@ -12,11 +11,6 @@ body{
   background-position: center;
   zoom: 75%;
 }
-
-header{
-  color:aqua;
-}
-
 
 main{
   margin-top: 150px;
@@ -36,6 +30,7 @@ main{
   font-family: Georgia;
   font-size: larger;
   font-weight: bold;
+  color:aqua;
 }
 
 #schermi{
@@ -43,7 +38,7 @@ main{
   align-items: center;
   justify-content: space-evenly;
   flex-direction: row;
-  margin-top: 100px; 
+
 }
 
 #schermo1{
@@ -199,10 +194,10 @@ main{
 
   body{
     margin: 0px;
-    background-image: url("../img/prove/");
+    background-image: url("../img/prove/sceltaPersonaggi1.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
   }
 
   #schermi{
@@ -223,6 +218,24 @@ main{
 
   main{
     margin: 0px;
+  }
+
+  h1{
+    border: solid 3px black;
+    border-radius: 25px;
+    background-color: #93C48B;
+    padding: 25px;
+  }
+
+  #title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: Georgia;
+    font-size: larger;
+    font-weight: bold;
+    color: black;
   }
 
 }
