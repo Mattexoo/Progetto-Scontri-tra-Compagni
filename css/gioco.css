@@ -135,8 +135,8 @@ button:hover{
 
 #difesa1:focus + #scudo1{
   display: block;
-  left: 28%;
-  top: 23%;
+  left: 23%;
+  top: 20%;
   animation: scudo1 3s linear;
 }
 /* Gundam*/
@@ -195,8 +195,8 @@ button:hover{
         
   }
   100%{
-    left: 28%;
-    top: 25%;   
+    left: 23%;
+    top: 20%;   
     height: 650px;
     width: 400px;
         
