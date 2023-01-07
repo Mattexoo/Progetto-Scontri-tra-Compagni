@@ -98,10 +98,10 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
-  left: 50%;
+  left: 64%;
   top: 0%;  
-  height: 150px;
-  width: 300px;
+  height: 180px;
+  width: 350px;
 }
 
 #colpo{
@@ -132,7 +132,7 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
-  height: 650px;
+  height: 550px;
   width: 400px;
 }
 /* Goldrake*/
@@ -140,14 +140,15 @@ button:hover{
   display: block;
   animation: attacco1 3s infinite;
   animation-timing-function: linear;
-  left: 50%;
+  left: 70%;
   top: 17%;   
   height: 150px;
   width: 300px;
 }
-#attacco1:focus + #nuvola{
+
+#attacco1:focus ~ #nuvola{
   display: block;
-  left: 50%;
+  left: 62.5%;
   top: 0%;   
 }
 
@@ -166,6 +167,10 @@ button:hover{
 
 #attacco2:focus + #colpo{
   display: block;
+  right: 30%;
+  top: 37%;
+  animation: attacco2 3s linear;
+  animation-timing-function: linear;
 }
 #ulti2:focus + #spada{
   display: block;
@@ -275,7 +280,7 @@ button:hover{
   100%{
     right: 25%;
     top: 17%;   
-    height: 600px;
+    height: 550px;
     width: 400px;
         
   }   
@@ -283,54 +288,98 @@ button:hover{
 
 @keyframes attacco1{ 
   0%{   
-    left: 66%;
-    top: 0%;   
+    left: 68%;
+    top: 8%;   
     height: 50px;
     width: 20px;       
   }
   15%{
-    left: 66%;
-    top: 3%;
+    left: 68.5%;
+    top: 8.5%;
     height: 100px;
     width: 40px;  
         
   }  
   30%{
-    left: 66%;
-    top: 5%;
+    left: 69%;
+    top: 10%;
     height: 150px;
     width: 60px;
         
   }
   45%{
-    left: 66%;
-    top: 8%;  
-    height: 75px;
-    width: 150px;
+    left: 69.2%;
+    top: 12%;  
+    height: 150px;
+    width: 70px;
         
   }
   60%{
-    left:66%;
-    top: 11%;    
-    height: 100px;
-    width: 200px;
+    left: 69.4%;
+    top: 14%;    
+    height: 200px;
+    width: 80px;
         
   }
   80%{
-    left: 60%;
-    top: 14%;   
-    height: 1250px;
-    width: 250px; 
+    left: 69.6%;
+    top: 16%;   
+    height: 250px;
+    width: 125px; 
         
   }
   100%{
-    left: 60%;
+    left: 70%;
     top: 17%;   
-    height: 150px;
-    width: 300px;
+    height: 300px;
+    width: 150px;
         
   }   
 
+}
+
+@keyframes attacco2 {
+  0%{   
+    right: 30%;
+    top: 37%;  
+    transform: rotate(0deg);       
+  }
+  15%{
+    right: 35%;
+    top: 35%;  
+    transform: rotate(120deg);  
+        
+  }  
+  30%{
+    right: 40%;
+    top: 35%;  
+    transform: rotate(240deg);  
+        
+  }
+  45%{
+    right: 45%;
+    top: 35%;  
+    transform: rotate(360deg);  
+        
+  }
+  60%{
+    right: 48%;
+    top: 36%;  
+    transform: rotate(480deg);  
+        
+  }
+  80%{
+    right: 55%;
+    top: 37%;  
+    transform: rotate(600deg);  
+        
+  }
+  100%{
+    right: 66%;
+    top: 37%;  
+    transform: rotate(720deg);  
+        
+  } 
 }
 
   @media screen and (max-width: 768px){ 
@@ -359,11 +408,35 @@ button:hover{
     width: 300px;
   }
 
+  #nuvola{
+    position:absolute;
+    z-index: 20;
+    display: none;
+    left: 64%;
+    top: 0%;  
+    height: 200px;
+    width: 300px;
+  }
+
+  #attacco1:focus ~ #nuvola{
+    display: block;
+    left: 57%;
+    top: 0%;   
+  }
+
   #difesa1:focus + #scudo1{
     display: block;
     left: 24.5%;
     top: 20%;
     animation: scudo1 3s linear;
+    animation-timing-function: linear;
+  }
+
+  #attacco2:focus + #colpo{
+    display: block;
+    right: 33.5%;
+    top: 38.2%;
+    animation: attacco2 3s linear;
     animation-timing-function: linear;
   }
 
@@ -468,6 +541,101 @@ button:hover{
           
     }   
   }
+
+  @keyframes attacco1{ 
+    0%{   
+      left: 68%;
+      top: 8%;   
+      height: 50px;
+      width: 20px;       
+    }
+    15%{
+      left: 68.5%;
+      top: 8.5%;
+      height: 100px;
+      width: 40px;  
+          
+    }  
+    30%{
+      left: 69%;
+      top: 10%;
+      height: 150px;
+      width: 60px;
+          
+    }
+    45%{
+      left: 69.2%;
+      top: 12%;  
+      height: 150px;
+      width: 70px;
+          
+    }
+    60%{
+      left: 69.4%;
+      top: 14%;    
+      height: 200px;
+      width: 80px;
+          
+    }
+    80%{
+      left: 69.6%;
+      top: 16%;   
+      height: 250px;
+      width: 125px; 
+          
+    }
+    100%{
+      left: 70%;
+      top: 17%;   
+      height: 300px;
+      width: 150px;
+          
+    }   
+  
+  }
+
+  @keyframes attacco2 {
+    0%{   
+      right: 30%;
+      top: 37%;  
+      transform: rotate(0deg);       
+    }
+    15%{
+      right: 35%;
+      top: 35%;  
+      transform: rotate(120deg);  
+          
+    }  
+    30%{
+      right: 40%;
+      top: 35%;  
+      transform: rotate(240deg);  
+          
+    }
+    45%{
+      right: 45%;
+      top: 35%;  
+      transform: rotate(360deg);  
+          
+    }
+    60%{
+      right: 48%;
+      top: 36%;  
+      transform: rotate(480deg);  
+          
+    }
+    80%{
+      right: 55%;
+      top: 37%;  
+      transform: rotate(600deg);  
+          
+    }
+    100%{
+      right: 58%;
+      top: 37%;  
+      transform: rotate(720deg);  
+          
+    } 
 }
 
 
@@ -502,6 +670,30 @@ button:hover{
     left: 24.5%;
     top: 17%;
     animation: scudo1 3s linear;
+    animation-timing-function: linear;
+  }
+
+  #attacco1:focus ~ #nuvola{
+    display: block;
+    left: 55%;
+    top: 0%;   
+  }
+
+  #attacco1:focus + #fulmine{
+    display: block;
+    animation: attacco1 3s infinite;
+    animation-timing-function: linear;
+    left: 67%;
+    top: 17%;   
+    height: 150px;
+    width: 300px;
+  }
+
+  #attacco2:focus + #colpo{
+    display: block;
+    right: 35%;
+    top: 34%;
+    animation: attacco2 3s linear;
     animation-timing-function: linear;
   }
 
@@ -606,4 +798,102 @@ button:hover{
           
     }   
   }
+
+  @keyframes attacco1{ 
+    0%{   
+      left: 65%;
+      top: 8%;   
+      height: 50px;
+      width: 20px;       
+    }
+    15%{
+      left: 65.5%;
+      top: 8.5%;
+      height: 100px;
+      width: 40px;  
+          
+    }  
+    30%{
+      left: 66%;
+      top: 10%;
+      height: 150px;
+      width: 60px;
+          
+    }
+    45%{
+      left: 66.2%;
+      top: 12%;  
+      height: 150px;
+      width: 70px;
+          
+    }
+    60%{
+      left: 66.4%;
+      top: 14%;    
+      height: 200px;
+      width: 80px;
+          
+    }
+    80%{
+      left: 66.6%;
+      top: 16%;   
+      height: 250px;
+      width: 125px; 
+          
+    }
+    100%{
+      left: 67%;
+      top: 17%;   
+      height: 300px;
+      width: 150px;
+          
+    }   
+  
   }
+
+  @keyframes attacco2 {
+    0%{   
+      right: 35%;
+      top: 35%;  
+      transform: rotate(0deg);       
+    }
+    15%{
+      right: 35%;
+      top: 32%;  
+      transform: rotate(120deg);  
+          
+    }  
+    30%{
+      right: 40%;
+      top: 32%;  
+      transform: rotate(240deg);  
+          
+    }
+    45%{
+      right: 45%;
+      top: 32%;  
+      transform: rotate(360deg);  
+          
+    }
+    60%{
+      right: 48%;
+      top: 33%;  
+      transform: rotate(480deg);  
+          
+    }
+    80%{
+      right: 55%;
+      top: 34%;  
+      transform: rotate(600deg);  
+          
+    }
+    100%{
+      right: 58%;
+      top: 35%;  
+      transform: rotate(720deg);  
+          
+    } 
+}
+
+}
+}
