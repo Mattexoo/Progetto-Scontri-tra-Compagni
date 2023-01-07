@@ -94,6 +94,15 @@ button:hover{
   height: 150px;
   width: 300px;
 }
+#nuvola{
+  position:absolute;
+  z-index: 20;
+  display: none;
+  left: 50%;
+  top: 0%;  
+  height: 150px;
+  width: 300px;
+}
 
 #colpo{
   position:absolute;
@@ -129,6 +138,17 @@ button:hover{
 /* Goldrake*/
 #attacco1:focus + #fulmine{
   display: block;
+  animation: attacco1 3s infinite;
+  animation-timing-function: linear;
+  left: 50%;
+  top: 17%;   
+  height: 150px;
+  width: 300px;
+}
+#attacco1:focus + #nuvola{
+  display: block;
+  left: 50%;
+  top: 0%;   
 }
 
 #ulti1:focus + #pugno{
@@ -259,6 +279,58 @@ button:hover{
     width: 400px;
         
   }   
+}
+
+@keyframes attacco1{ 
+  0%{   
+    left: 66%;
+    top: 0%;   
+    height: 50px;
+    width: 20px;       
+  }
+  15%{
+    left: 66%;
+    top: 3%;
+    height: 100px;
+    width: 40px;  
+        
+  }  
+  30%{
+    left: 66%;
+    top: 5%;
+    height: 150px;
+    width: 60px;
+        
+  }
+  45%{
+    left: 66%;
+    top: 8%;  
+    height: 75px;
+    width: 150px;
+        
+  }
+  60%{
+    left:66%;
+    top: 11%;    
+    height: 100px;
+    width: 200px;
+        
+  }
+  80%{
+    left: 60%;
+    top: 14%;   
+    height: 1250px;
+    width: 250px; 
+        
+  }
+  100%{
+    left: 60%;
+    top: 17%;   
+    height: 150px;
+    width: 300px;
+        
+  }   
+
 }
 
   @media screen and (max-width: 768px){ 
