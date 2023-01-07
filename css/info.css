@@ -53,4 +53,8 @@ img{
     top: 25 px;
     right: 0px;
     cursor: pointer;
-  }
+}
+
+.card{
+    padding: 10px;
+}
