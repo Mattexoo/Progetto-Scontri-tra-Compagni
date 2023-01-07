@@ -55,6 +55,10 @@ section{
 
 #scritta{
   color: white;
+  border: solid 3px black;
+  border-radius: 15px;
+  background-color: #A7CDBD;
+  margin: 10px;
 }
 
 footer{
@@ -101,5 +105,11 @@ footer{
 
 @media screen and (max-width: 768px){
 
-  
+  body{
+    margin: 0px;
+    background-image: url("../img/");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
 }
