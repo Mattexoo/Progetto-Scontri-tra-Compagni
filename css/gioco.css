@@ -116,8 +116,8 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
-  height: 800px;
-  width: 500px;
+  height: 650px;
+  width: 400px;
 }
 #scudo2{
   position:absolute;
@@ -135,7 +135,9 @@ button:hover{
 
 #difesa1:focus + #scudo1{
   display: block;
-  animation: scudo1 10s infinite ;
+  left: 400px;
+  top: 150px;
+  animation: scudo1 3s linear;
 }
 /* Gundam*/
 
@@ -151,51 +153,55 @@ button:hover{
 }
 
 @keyframes scudo1{ 
-  0%{
-        
+  0%{   
     left: 400px;
-    top: 100px;        
+    top: 200px;   
+    height: 20px;
+    width: 20px;       
   }
-  5%{
-      
+  15%{
     left: 400px;
-    top: 100px; 
+    top: 200px;
+    height: 100px;
+    width: 40px;  
         
   }  
   30%{
-    
     left: 400px;
-    top: 100px; 
+    top: 200px;
+    height: 200px;
+    width: 60px;
         
   }
   45%{
-        
     left: 400px;
-    top: 100px; 
+    top: 200px;  
+    height: 300px;
+    width: 100px;
         
   }
   60%{
-        
     left: 400px;
-    top: 100px; ;
+    top: 200px;    
+    height: 400px;
+    width: 200px;
         
   }
   80%{
-        
     left: 400px;
-    top: 100px; 
+    top: 200px;   
+    height: 500px;
+    width: 300px; 
         
   }
   100%{
-        
     left: 400px;
-    top: 100px; 
+    top: 150px;   
+    height: 650px;
+    width: 400px;
         
-  }
-    
+  }   
 }
-
-
 
 
   @media screen and (max-width: 768px){ 
@@ -207,7 +213,6 @@ button:hover{
     background-size: cover;
     zoom: 70%;
   }
-
   }
 
   @media screen and (max-width: 550px){
