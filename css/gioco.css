@@ -87,6 +87,18 @@ button:hover{
   opacity: 0.6; 
   cursor: not-allowed;
 }
+.imgAnim{
+  position:absolute;
+  z-index: 20;
+  display: none;
+}
+#attacco1:focus{
+ display: block;
+}
+
+
+
+
 
 @media screen and (max-width: 768px){
 
