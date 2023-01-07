@@ -116,37 +116,89 @@ button:hover{
   position:absolute;
   z-index: 20;
   display: none;
+  height: 800px;
+  width: 500px;
 }
 #scudo2{
   position:absolute;
   z-index: 20;
   display: none;
 }
-
-#ulti2:focus + #spada{
-  display: block;
-}
-#ulti1:focus + #pugno{
-  display: block;
-}
+/* Goldrake*/
 #attacco1:focus + #fulmine{
   display: block;
 }
+
+#ulti1:focus + #pugno{
+  display: block;
+}
+
+#difesa1:focus + #scudo1{
+  display: block;
+  animation: scudo1 10s infinite ;
+}
+/* Gundam*/
+
 #attacco2:focus + #colpo{
   display: block;
 }
-#difesa1:focus + #scudo1{
+#ulti2:focus + #spada{
   display: block;
 }
+
 #difesa2:focus + #scudo2{
   display: block;
 }
 
+@keyframes scudo1{ 
+  0%{
+        
+    left: 400px;
+    top: 100px;        
+  }
+  5%{
+      
+    left: 400px;
+    top: 100px; 
+        
+  }  
+  30%{
+    
+    left: 400px;
+    top: 100px; 
+        
+  }
+  45%{
+        
+    left: 400px;
+    top: 100px; 
+        
+  }
+  60%{
+        
+    left: 400px;
+    top: 100px; ;
+        
+  }
+  80%{
+        
+    left: 400px;
+    top: 100px; 
+        
+  }
+  100%{
+        
+    left: 400px;
+    top: 100px; 
+        
+  }
+    
+}
 
 
 
 
-@media screen and (max-width: 768px){
+  @media screen and (max-width: 768px){ 
 
   body{
     margin: 0px;
@@ -156,9 +208,9 @@ button:hover{
     zoom: 70%;
   }
 
-}
+  }
 
-@media screen and (max-width: 550px){
+  @media screen and (max-width: 550px){
 
   body{
     margin: 0px;
@@ -168,4 +220,4 @@ button:hover{
     zoom: 60%;
   }
 
-}
+  }
