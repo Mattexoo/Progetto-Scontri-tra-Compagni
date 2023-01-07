@@ -47,3 +47,15 @@ div{
   right: 0px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px){
+
+  body{
+    margin: 0px;
+    background-image: url("../img/prove/Magic-Forest-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+
+
+}

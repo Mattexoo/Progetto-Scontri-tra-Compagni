@@ -107,9 +107,13 @@ footer{
 
   body{
     margin: 0px;
-    background-image: url("../img/");
+    background-image: url("../img/prove/");
     background-repeat: no-repeat;
     background-size: 100%;
+  }
+
+  footer{
+    display: none;
   }
 
 }
