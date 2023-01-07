@@ -7,8 +7,9 @@ body{
   margin: 0px;
   background-image: url("../img/robot7080.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  zoom: 75%;
+  background-size: cover;
+  background-position: center;
+  zoom: 90%;
 }
 
 header{
@@ -104,17 +105,3 @@ footer{
   justify-content: space-between;
 }
 
-@media screen and (max-width: 768px){
-
-  body{
-    margin: 0px;
-    background-image: url("../img/prove/");
-    background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  footer{
-    display: none;
-  }
-
-}

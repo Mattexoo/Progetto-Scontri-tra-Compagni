@@ -8,6 +8,7 @@ body{
   background-image: url("../img/arena.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  zoom: 80%;
 }
 
 .title{
@@ -85,4 +86,28 @@ button:hover{
   border-radius: 10px;
   opacity: 0.6; 
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 768px){
+
+  body{
+    margin: 0px;
+    background-image: url("../img/arena.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    zoom: 70%;
+  }
+
+}
+
+@media screen and (max-width: 550px){
+
+  body{
+    margin: 0px;
+    background-image: url("../img/arena.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    zoom: 60%;
+  }
+
 }

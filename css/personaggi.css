@@ -8,8 +8,9 @@ body{
   margin: 0px;
   background-image: url("../img/sfondoPersonaggi.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
-  zoom: 90%;
+  background-size: cover;
+  background-position: center;
+  zoom: 75%;
 }
 
 header{
@@ -156,7 +157,8 @@ main{
     margin: 0px;
     background-image: url("../img/prove/");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
   }
 
   #schermi{
