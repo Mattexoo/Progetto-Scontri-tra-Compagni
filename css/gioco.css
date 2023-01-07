@@ -87,12 +87,28 @@ button:hover{
   opacity: 0.6; 
   cursor: not-allowed;
 }
-.imgAnim{
+#fulmine{
   position:absolute;
   z-index: 20;
   display: none;
 }
-#attacco1:focus{
+#colpo{
+  position:absolute;
+  z-index: 20;
+  display: none;
+}
+#pugno{
+  position:absolute;
+  z-index: 20;
+  display: none;
+}
+#spada{
+  position:absolute;
+  z-index: 20;
+  display: none;
+}
+
+#attacco1fulmine :focus {
  display: block;
 }
 
