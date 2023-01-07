@@ -58,8 +58,6 @@ body{
 .lifebar{
   display: flex;
   justify-content: flex-start;
-  width: 275px;
-  height: 100px;
 }
 
 button :hover{
