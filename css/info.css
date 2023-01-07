@@ -58,3 +58,44 @@ img{
 .card{
     padding: 10px;
 }
+
+.ultimate{
+    animation: raimbow 5s linear infinite;
+}
+
+@keyframes raimbow{
+    0%{
+       color: blue;
+      }
+      10%{
+        color: blueviolet;
+      }
+      20%{
+        color: red;
+      }
+      30%{
+        color: orangered;
+      }
+      40%{
+        color: yellow;
+      }
+      50%{
+        color: greenyellow;
+      }
+      60%{
+        color: green;
+      }
+      70%{
+        color: greenyellow;
+      }
+      80%{
+        color: lightblue;
+      }
+      90%{
+        color: cyan;
+      }
+      100%{
+        color: blue;
+      }
+      
+  }
