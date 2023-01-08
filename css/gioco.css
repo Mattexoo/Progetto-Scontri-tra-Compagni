@@ -138,12 +138,12 @@ button:hover{
 /* Goldrake*/
 #attacco1:focus + #fulmine{
   display: block;
-  animation: attacco1 1s infinite;
+  animation: attacco1 1s;
   animation-timing-function: linear;
   left: 70%;
-  top: 17%;   
-  height: 150px;
-  width: 300px;
+  top: 10%;   
+  height: 100px;
+  width: 100px;
 }
 
 #attacco1:focus ~ #nuvola{
@@ -154,6 +154,11 @@ button:hover{
 
 #ulti1:focus + #pugno{
   display: block;
+  animation: ulti1 1s infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  left: 28%;
+  top: 38%; 
 }
 
 #difesa1:focus + #scudo1{
@@ -175,6 +180,12 @@ button:hover{
 
 #ulti2:focus + #spada{
   display: block;
+  animation: ulti2 1s infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: 3;
+  right: 26%;
+  top: 35%;
+  transform: rotate(35deg);
 }
 
 #difesa2:focus + #scudo2{
@@ -383,6 +394,43 @@ button:hover{
   } 
 }
 
+@keyframes ulti1 {
+  0%{   
+    left: 28%;
+    top: 38%;       
+  }
+  15%{
+    left: 30%;
+    top: 40%;   
+        
+  }  
+  30%{
+    left: 35%;
+    top: 45%;  
+        
+  }
+  45%{
+    left: 40%;
+    top: 40%;  
+        
+  }
+  60%{
+    left: 48%;
+    top: 32%;   
+        
+  }
+  80%{
+    left: 55%;
+    top: 28%;   
+        
+  }
+  100%{
+    left: 63%;
+    top: 32%;  
+        
+  }
+}
+
   @media screen and (max-width: 768px){ 
 
   body{
@@ -435,20 +483,28 @@ button:hover{
 
   #attacco1:focus + #fulmine{
     display: block;
-    animation: attacco1 1s infinite;
+    animation: attacco1 1s;
     animation-timing-function: linear;
-    left: 70%;
-    top: 17%;   
-    height: 150px;
-    width: 300px;
+    left: 66%;
+    top: 10%;   
+    height: 100px;
+    width: 100px;
   }
 
   #attacco2:focus + #colpo{
     display: block;
-    right: 30%;
+    right: 35%;
     top: 37%;
     animation: attacco2 1s linear;
     animation-timing-function: linear;
+  }
+  #ulti1:focus + #pugno{
+    display: block;
+    animation: ulti1 1s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    left: 28%;
+    top: 38%; 
   }
 
 
@@ -608,12 +664,12 @@ button:hover{
 
   @keyframes attacco2 {
     0%{   
-      right: 30%;
+      right: 35%;
       top: 37%;  
       transform: rotate(0deg);       
     }
     15%{
-      right: 35%;
+      right: 37%;
       top: 35%;  
       transform: rotate(120deg);  
           
@@ -648,8 +704,47 @@ button:hover{
       transform: rotate(720deg);  
           
     } 
-}
+  }
 
+  @keyframes ulti1 {
+    0%{   
+      left: 28%;
+      top: 38%;       
+    }
+    15%{
+      left: 30%;
+      top: 40%;   
+          
+    }  
+    30%{
+      left: 35%;
+      top: 45%;  
+          
+    }
+    45%{
+      left: 40%;
+      top: 40%;  
+          
+    }
+    60%{
+      left: 45%;
+      top: 32%;   
+          
+    }
+    80%{
+      left: 50%;
+      top: 28%;   
+          
+    }
+    100%{
+      left: 55%;
+      top: 32%;  
+          
+    }
+  }
+
+
+}
 
   @media screen and (max-width: 550px){
 
@@ -693,19 +788,19 @@ button:hover{
 
   #attacco1:focus + #fulmine{
     display: block;
-    animation: attacco1 1s infinite;
+    animation: attacco1 0.5s;
     animation-timing-function: linear;
-    left: 67%;
-    top: 17%;   
-    height: 150px;
-    width: 300px;
+    left: 60%;
+    top: 10%;   
+    height: 100px;
+    width: 100px;
   }
 
   #attacco2:focus + #colpo{
     display: block;
     right: 35%;
     top: 34%;
-    animation: attacco2 1s linear;
+    animation: attacco2 0.5s linear;
     animation-timing-function: linear;
   }
 
@@ -906,5 +1001,42 @@ button:hover{
           
     } 
 }
+@keyframes ulti1 {
+  0%{   
+    left: 28%;
+    top: 38%;       
+  }
+  15%{
+    left: 30%;
+    top: 40%;   
+        
+  }  
+  30%{
+    left: 32%;
+    top: 45%;  
+        
+  }
+  45%{
+    left: 35%;
+    top: 40%;  
+        
+  }
+  60%{
+    left: 40%;
+    top: 32%;   
+        
+  }
+  80%{
+    left: 45%;
+    top: 28%;   
+        
+  }
+  100%{
+    left: 50%;
+    top: 32%;  
+        
+  }
 }
+
 }
+
