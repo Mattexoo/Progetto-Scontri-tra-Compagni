@@ -359,37 +359,37 @@ button:hover{
   15%{
     right: 35%;
     top: 35%;  
-    transform: rotate(120deg);  
+    transform: rotate(-120deg);  
         
   }  
   30%{
     right: 40%;
     top: 35%;  
-    transform: rotate(240deg);  
+    transform: rotate(-240deg);  
         
   }
   45%{
     right: 45%;
     top: 35%;  
-    transform: rotate(360deg);  
+    transform: rotate(-360deg);  
         
   }
   60%{
-    right: 48%;
+    right: 50%;
     top: 36%;  
-    transform: rotate(480deg);  
+    transform: rotate(-480deg);  
         
   }
-  80%{
+  85%{
     right: 55%;
     top: 37%;  
-    transform: rotate(600deg);  
+    transform: rotate(-600deg);  
         
   }
   100%{
     right: 66%;
     top: 37%;  
-    transform: rotate(720deg);  
+    transform: rotate(-720deg);  
         
   } 
 }
@@ -427,6 +427,51 @@ button:hover{
   100%{
     left: 63%;
     top: 32%;  
+        
+  }
+}
+
+@keyframes ulti2 {
+  0%{   
+    right: 26%;
+    top: 35%;
+    transform: rotate(35deg);       
+  }
+  15%{
+    right: 30%;
+    top: 36%;   
+        
+  }  
+  30%{
+    right: 35%;
+    top: 37%;  
+        
+  }
+  45%{
+    right: 40%;
+    top: 37%;  
+        
+  }
+  60%{
+    right: 48%;
+    top: 38%;   
+        
+  }
+  70%{
+    right: 63%;
+    top: 38%; 
+    transform: rotate(0deg);  
+  }
+  80%{
+    right: 63%;
+    top: 38%; 
+    transform: rotate(-180deg);   
+        
+  }
+  100%{
+    right: 63%;
+    top: 38%;  
+    transform: rotate(-360deg); 
         
   }
 }
@@ -505,6 +550,15 @@ button:hover{
     animation-iteration-count: 3;
     left: 28%;
     top: 38%; 
+  }
+  #ulti2:focus + #spada{
+    display: block;
+    animation: ulti2 1s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    right: 28%;
+    top: 35%;
+    transform: rotate(35deg);
   }
 
 
@@ -671,37 +725,37 @@ button:hover{
     15%{
       right: 37%;
       top: 35%;  
-      transform: rotate(120deg);  
+      transform: rotate(-120deg);  
           
     }  
     30%{
       right: 40%;
       top: 35%;  
-      transform: rotate(240deg);  
+      transform: rotate(-240deg);  
           
     }
     45%{
       right: 45%;
       top: 35%;  
-      transform: rotate(360deg);  
+      transform: rotate(-360deg);  
           
     }
     60%{
-      right: 48%;
+      right: 50%;
       top: 36%;  
-      transform: rotate(480deg);  
+      transform: rotate(-480deg);  
           
     }
-    80%{
+    85%{
       right: 55%;
       top: 37%;  
-      transform: rotate(600deg);  
+      transform: rotate(-600deg);  
           
     }
     100%{
       right: 58%;
       top: 37%;  
-      transform: rotate(720deg);  
+      transform: rotate(-720deg);  
           
     } 
   }
@@ -743,6 +797,50 @@ button:hover{
     }
   }
 
+  @keyframes ulti2 {
+    0%{   
+      right: 28%;
+      top: 35%;
+      transform: rotate(35deg);       
+    }
+    15%{
+      right: 30%;
+      top: 36%;   
+          
+    }  
+    30%{
+      right: 35%;
+      top: 37%;  
+          
+    }
+    45%{
+      right: 40%;
+      top: 37%;  
+          
+    }
+    60%{
+      right: 48%;
+      top: 38%;   
+          
+    }
+    70%{
+      right: 60%;
+      top: 38%; 
+      transform: rotate(0deg);  
+    }
+    80%{
+      right: 60%;
+      top: 38%; 
+      transform: rotate(-180deg);   
+          
+    }
+    100%{
+      right: 60%;
+      top: 38%;  
+      transform: rotate(-360deg); 
+          
+    }
+  }
 
 }
 
@@ -802,6 +900,16 @@ button:hover{
     top: 34%;
     animation: attacco2 0.5s linear;
     animation-timing-function: linear;
+  }
+
+  #ulti2:focus + #spada{
+    display: block;
+    animation: ulti2 1s infinite;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+    right: 28%;
+    top: 30%;
+    transform: rotate(35deg);
   }
 
   @keyframes scudo1{ 
@@ -967,37 +1075,37 @@ button:hover{
     15%{
       right: 35%;
       top: 32%;  
-      transform: rotate(120deg);  
+      transform: rotate(-120deg);  
           
     }  
     30%{
       right: 40%;
       top: 32%;  
-      transform: rotate(240deg);  
+      transform: rotate(-240deg);  
           
     }
     45%{
       right: 45%;
       top: 32%;  
-      transform: rotate(360deg);  
+      transform: rotate(-360deg);  
           
     }
     60%{
       right: 48%;
       top: 33%;  
-      transform: rotate(480deg);  
+      transform: rotate(-480deg);  
           
     }
-    80%{
+    85%{
       right: 55%;
       top: 34%;  
-      transform: rotate(600deg);  
+      transform: rotate(-600deg);  
           
     }
     100%{
       right: 58%;
       top: 35%;  
-      transform: rotate(720deg);  
+      transform: rotate(-720deg);  
           
     } 
 }
@@ -1036,7 +1144,49 @@ button:hover{
     top: 32%;  
         
   }
+ }
+ @keyframes ulti2 {
+  0%{   
+    right: 28%;
+    top: 30%;
+    transform: rotate(35deg);       
+  }
+  15%{
+    right: 30%;
+    top: 32%;   
+        
+  }  
+  30%{
+    right: 35%;
+    top: 33%;  
+        
+  }
+  45%{
+    right: 40%;
+    top: 32%;  
+        
+  }
+  60%{
+    right: 48%;
+    top: 30%;   
+        
+  }
+  70%{
+    right: 57%;
+    top: 30%; 
+    transform: rotate(0deg);  
+  }
+  80%{
+    right: 57%;
+    top: 30%; 
+    transform: rotate(-180deg);   
+        
+  }
+  100%{
+    right: 57%;
+    top: 30%;  
+    transform: rotate(-360deg); 
+        
+  }
 }
-
 }
-
