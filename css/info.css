@@ -29,6 +29,13 @@ img{
     width: 200px;
 }
 
+#descrizioneProgetto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #Personaggi{
     display: flex;
     justify-content: center;
