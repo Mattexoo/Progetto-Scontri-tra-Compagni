@@ -1,8 +1,7 @@
 let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
 let css= document.querySelector("head");
-function sceltaPersonaggio(){
-     
+function sceltaPersonaggio(){    
      let a=`
      <section id="schermi">
      <div id="schermo1">
