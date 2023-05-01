@@ -2,7 +2,7 @@ let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
 let css= document.querySelector("head");
 function sceltaPersonaggio(){    
-     let a=`
+     let i=`
      <section id="schermi">
      <div id="schermo1">
        <section class="selezioneP">
@@ -29,79 +29,78 @@ function sceltaPersonaggio(){
    <button id="btnsceltaAvvenuta" onclick="generaGame()">INIZIA LO SCONTRO</button>
    </section>
      `
-     let b= `
+     let j= `
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <!-- initial-scale è a 1.2 così lo zoom è settato a 120% -->
      <meta name="viewport" content="width=device-width, initial-scale=1.2">
      <link href="css/personaggi.css" rel="stylesheet" type="text/css"/>
      <script src="script.js" defer ></script>
+     <script src="dati.js" defer ></script>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      <title>Robot War</title>
      `
-     let c= `
+     let k= `
      <section id="title">
      <h1>SCEGLI IL TUO PERSONAGGIO</h1>
      </section>
      `
-     htmlTitolo.innerHTML=c;
-     css.innerHTML=b;
-     html.innerHTML= a;
+     htmlTitolo.innerHTML=k;
+     css.innerHTML=j;
+     html.innerHTML= i;
+
+     //Personaggi giocatore 1
+     let a = document.getElementById("img1");
+     let b = document.getElementById("img2");
+     let c = document.getElementById("img3");
+     let d = document.getElementById("img4");
+
+     //Personaggi giocatore 2
+     let e = document.getElementById("img5");
+     let f = document.getElementById("img6");
+     let g = document.getElementById("img7");
+     let h = document.getElementById("img8");
+
+     let personaggio1= '';
+     let personaggio2= '';
+
+     //scelta personaggio giocatore 1
+     a.addEventListener("click", function(){
+          personaggio1 = "a";
+          console.log(personaggio1);
+     });
+     b.addEventListener("click", function(){
+          personaggio1 = "b";
+          console.log(personaggio1);
+     });
+     c.addEventListener("click", function(){
+          personaggio1 = "c";
+          console.log(personaggio1);
+     });
+     d.addEventListener("click", function(){
+          personaggio1 = "d";
+          console.log(personaggio1);
+     });
+
+     //scelta personaggio giocatore 2
+     e.addEventListener("click", function(){
+          personaggio2 = "e";
+          console.log(personaggio2);
+     });
+     f.addEventListener("click", function(){
+          personaggio2 = "f";
+          console.log(personaggio2);
+     });
+     g.addEventListener("click", function(){
+          personaggio2 = "g";
+          console.log(personaggio2);
+     });
+     h.addEventListener("click", function(){
+          personaggio2 = "h";
+          console.log(personaggio2);
+     });
 }
-//Personaggi giocatore 1
-let a = document.getElementById("img1");
-let b = document.getElementById("img2");
-let c = document.getElementById("img3");
-let d = document.getElementById("img4");
-
-//Personaggi giocatore 2
-let e = document.getElementById("img5");
-let f = document.getElementById("img6");
-let g = document.getElementById("img7");
-let h = document.getElementById("img8");
-
-let personaggio1= '';
-let personaggio2= '';
-
-//scelta personaggio giocatore 1
-a.addEventListener("click", function(){
-     personaggio1 = "a";
-     console.log(personaggio1);
-});
-b.addEventListener("click", function(){
-     personaggio1 = "b";
-     console.log(personaggio1);
-});
-c.addEventListener("click", function(){
-     personaggio1 = "c";
-     console.log(personaggio1);
-});
-d.addEventListener("click", function(){
-     personaggio1 = "d";
-     console.log(personaggio1);
-});
-
-//scelta personaggio giocatore 2
-e.addEventListener("click", function(){
-     personaggio2 = "e";
-     console.log(personaggio2);
-});
-f.addEventListener("click", function(){
-     personaggio2 = "f";
-     console.log(personaggio2);
-});
-g.addEventListener("click", function(){
-     personaggio2 = "g";
-     console.log(personaggio2);
-});
-h.addEventListener("click", function(){
-     personaggio2 = "h";
-     console.log(personaggio2);
-});
-
-console.log(personaggio1);
-console.log(personaggio2);
 
 function generaGame(){  
      let a=`
@@ -110,10 +109,11 @@ function generaGame(){
      <!-- initial-scale è a 1.2 così lo zoom è settato a 120% -->
      <meta name="viewport" content="width=device-width, initial-scale=1.2">
      <script src="script.js" defer ></script>
+     <script src="dati.js" defer ></script>
      <title>Robot War</title>
      <link href="css/gioco.css" rel="stylesheet" type="text/css"/>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      `
      let b=`
      <section id="schermi">
