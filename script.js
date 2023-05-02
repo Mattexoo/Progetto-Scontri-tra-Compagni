@@ -1,9 +1,8 @@
 let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
-let css= document.querySelector("head");
+let css=document.querySelector("head");
 let personaggio1;
 let personaggio2;
-
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
@@ -12,7 +11,7 @@ function personaggioCasuale(){
 //creazione della pagina di scelta del personaggio e selezione di essi
 function sceltaPersonaggio(){    
      let i=`
-     <section id="schermi">
+     <section class="schermi">
      <div id="schermo1">
        <section class="selezioneP">
          <div class="imgP"><img src="./img/goldrake/goldrake-logo.jpg" alt="logo" id="img1"></div>
@@ -40,8 +39,13 @@ function sceltaPersonaggio(){
        </section>
      </div>
    </section>
-   <section id="sceltaAvvenuta">
-   <button id="btnsceltaAvvenuta" onclick="generaGame()">INIZIA LO SCONTRO</button>
+   <section class="schermi">
+   <div id="btnsceltaG1Avvenuta">
+   <button class="btnsceltaAvvenuta btn btn-success" onclick="cambiaValore1()">CONFERMA</button>
+   </div>
+   <div id="btnsceltaG2Avvenuta">
+   <button class="btnsceltaAvvenuta btn btn-success" onclick="cambiaValore2()">CONFERMA</button>
+   </div>
    </section>
      `
      let j= `
@@ -78,8 +82,10 @@ function sceltaPersonaggio(){
      let g = document.getElementById("img7");
      let h = document.getElementById("img8");
      let m = document.getElementById("img10");
+      
+      do{
 
-
+      }while()
 
      //scelta personaggio giocatore 1
      a.addEventListener("click", function(){
@@ -124,6 +130,19 @@ function sceltaPersonaggio(){
       personaggio2 = personaggiGiocatore2[personaggioCasuale()];
       console.log(personaggio2);
      });
+}
+let bottoneP1;
+let bottoneP2;
+function cambiaValore1(){
+  bottoneP1=document.getElementById("btnsceltaG1Avvenuta");
+  let a=`<button id="btnsceltaG1Avvenuta" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
+  bottoneP1.innerHTML=a;
+}
+
+function cambiaValore2(){
+  bottoneP2=document.getElementById("btnsceltaG2Avvenuta");
+  let a=`<button id="btnsceltaG2Avvenuta" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
+  bottoneP2.innerHTML=a
 }
 
 function generaGame(){  

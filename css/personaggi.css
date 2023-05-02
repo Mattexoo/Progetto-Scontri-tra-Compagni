@@ -33,7 +33,7 @@ main{
   animation: raimbow 5s linear infinite;
 }
 
-#schermi{
+.schermi{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -86,12 +86,11 @@ main{
   margin-bottom: 100px;
 }
 
-#btnsceltaAvvenuta{
-  background-color: green;
+.btnsceltaAvvenuta{
   border-radius: 10px;
   margin-top: 100px;
-  height: 120px;
-  width: 300px;
+  height: 100px;
+  width: 250px;
   font-size: large;
   font-weight: bold;
   cursor: pointer;
