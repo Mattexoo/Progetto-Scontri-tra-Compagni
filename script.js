@@ -10,16 +10,17 @@ function personaggioCasuale(){
 
 //creazione della pagina di scelta del personaggio e selezione di essi
 function sceltaPersonaggio(){    
-     let i=`
+     let i=` 
+      <button  onclick="risultato()" ></button>
      <section class="schermi">
      <div id="schermo1">
        <section class="selezioneP">
-         <div class="imgP"><img src="./img/goldrake/goldrake-logo.jpg" alt="logo" id="img1"></div>
-         <div class="imgP"><img src="./img/gundam/gundam-logo.jpg" alt="logo" id="img2"></div>
+         <div class="imgP"><img src="./img/goldrake-dx/goldrake-logo.jpg" alt="logo" id="img1"></div>
+         <div class="imgP"><img src="./img/gundam-dx/gundam-logo.jpg" alt="logo" id="img2"></div>
        </section>
        <section class="selezioneP">
-         <div class="imgP"><img src="./img/jeeg-robot/jeeg robot-logo.jpg" alt="logo" id="img3"></div>
-         <div class="imgP"><img src="./img/mazinga/mazinga-logo.jpg" alt="logo" id="img4"></div>
+         <div class="imgP"><img src="./img/jeeg-robot-dx/jeeg-robot-logo.jpg" alt="logo" id="img3"></div>
+         <div class="imgP"><img src="./img/mazinga-dx/mazinga-logo.jpg" alt="logo" id="img4"></div>
        </section>
        <section class="selezioneP">
        <div class="imgP"><img src="./img/dadoCasuale.png" alt="logo" id="img9"></div>
@@ -27,12 +28,12 @@ function sceltaPersonaggio(){
      </div>
      <div id="schermo2">
        <section class="selezioneP">
-         <div class="imgP"><img src="./img/goldrake/goldrake-logo.jpg" alt="logo" id="img5"></div>
-         <div class="imgP"><img src="./img/gundam/gundam-logo.jpg" alt="logo" id="img6"></div>
+         <div class="imgP"><img src="./img/goldrake-dx/goldrake-logo.jpg" alt="logo" id="img5"></div>
+         <div class="imgP"><img src="./img/gundam-dx/gundam-logo.jpg" alt="logo" id="img6"></div>
        </section>
        <section class="selezioneP">
-         <div class="imgP"><img src="./img/jeeg-robot/jeeg robot-logo.jpg" alt="logo" id="img7"></div>
-         <div class="imgP"><img src="./img/mazinga/mazinga-logo.jpg" alt="logo" id="img8"></div>
+         <div class="imgP"><img src="./img/jeeg-robot-dx/jeeg-robot-logo.jpg" alt="logo" id="img7"></div>
+         <div class="imgP"><img src="./img/mazinga-dx/mazinga-logo.jpg" alt="logo" id="img8"></div>
        </section>
        <section class="selezioneP">
        <div class="imgP"><img src="./img/dadoCasuale.png" alt="logo" id="img10"></div>
@@ -217,4 +218,13 @@ function generaGame(){
      css.innerHTML=a;
      html.innerHTML=b;
      htmlTitolo.innerHTML=c;
+}
+
+
+
+function risultato(){
+  window.open("classifica.html");
+}
+function classifica(){
+  
 }
