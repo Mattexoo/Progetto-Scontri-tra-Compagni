@@ -1,6 +1,11 @@
 let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
 let css= document.querySelector("head");
+let personaggio1;
+let personaggio2;
+function personaggioCasuale(){
+  return Math.floor(Math.random() * 4);
+}
 function sceltaPersonaggio(){    
      let i=`
      <section id="schermi">
@@ -13,6 +18,9 @@ function sceltaPersonaggio(){
          <div class="imgP"><img src="./img/jeeg-robot/jeeg robot-logo.jpg" alt="logo" id="img3"></div>
          <div class="imgP"><img src="./img/mazinga/mazinga-logo.jpg" alt="logo" id="img4"></div>
        </section>
+       <section class="selezioneP">
+       <div class="imgP"><img src="./img/dadoCasuale.png" alt="logo" id="img9"></div>
+       </section>
      </div>
      <div id="schermo2">
        <section class="selezioneP">
@@ -22,6 +30,9 @@ function sceltaPersonaggio(){
        <section class="selezioneP">
          <div class="imgP"><img src="./img/jeeg-robot/jeeg robot-logo.jpg" alt="logo" id="img7"></div>
          <div class="imgP"><img src="./img/mazinga/mazinga-logo.jpg" alt="logo" id="img8"></div>
+       </section>
+       <section class="selezioneP">
+       <div class="imgP"><img src="./img/dadoCasuale.png" alt="logo" id="img10"></div>
        </section>
      </div>
    </section>
@@ -35,8 +46,8 @@ function sceltaPersonaggio(){
      <!-- initial-scale è a 1.2 così lo zoom è settato a 120% -->
      <meta name="viewport" content="width=device-width, initial-scale=1.2">
      <link href="css/personaggi.css" rel="stylesheet" type="text/css"/>
-     <script src="script.js" defer ></script>
      <script src="dati.js" defer ></script>
+     <script src="script.js" defer ></script>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
      <title>Robot War</title>
@@ -55,50 +66,59 @@ function sceltaPersonaggio(){
      let b = document.getElementById("img2");
      let c = document.getElementById("img3");
      let d = document.getElementById("img4");
+     let l = document.getElementById("img9");
 
      //Personaggi giocatore 2
      let e = document.getElementById("img5");
      let f = document.getElementById("img6");
      let g = document.getElementById("img7");
      let h = document.getElementById("img8");
+     let m = document.getElementById("img10");
 
-     let personaggio1= '';
-     let personaggio2= '';
+
 
      //scelta personaggio giocatore 1
      a.addEventListener("click", function(){
-          personaggio1 = "a";
+          personaggio1 = personaggiGiocatore1[0];
           console.log(personaggio1);
      });
      b.addEventListener("click", function(){
-          personaggio1 = "b";
+          personaggio1 = personaggiGiocatore1[1];
           console.log(personaggio1);
      });
      c.addEventListener("click", function(){
-          personaggio1 = "c";
+          personaggio1 = personaggiGiocatore1[2];
           console.log(personaggio1);
      });
      d.addEventListener("click", function(){
-          personaggio1 = "d";
+          personaggio1 = personaggiGiocatore1[3];
           console.log(personaggio1);
+     });
+     l.addEventListener("click", function(){
+      personaggio1 = personaggiGiocatore1[personaggioCasuale()];
+      console.log(personaggio1);
      });
 
      //scelta personaggio giocatore 2
      e.addEventListener("click", function(){
-          personaggio2 = "e";
+          personaggio2 = personaggiGiocatore2[0];
           console.log(personaggio2);
      });
      f.addEventListener("click", function(){
-          personaggio2 = "f";
+          personaggio2 = personaggiGiocatore2[1];
           console.log(personaggio2);
      });
      g.addEventListener("click", function(){
-          personaggio2 = "g";
+          personaggio2 = personaggiGiocatore2[2];
           console.log(personaggio2);
      });
      h.addEventListener("click", function(){
-          personaggio2 = "h";
+          personaggio2 = personaggiGiocatore2[3];
           console.log(personaggio2);
+     });
+     m.addEventListener("click", function(){
+      personaggio2 = personaggiGiocatore2[personaggioCasuale()];
+      console.log(personaggio2);
      });
 }
 
@@ -108,8 +128,8 @@ function generaGame(){
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <!-- initial-scale è a 1.2 così lo zoom è settato a 120% -->
      <meta name="viewport" content="width=device-width, initial-scale=1.2">
-     <script src="script.js" defer ></script>
      <script src="dati.js" defer ></script>
+     <script src="script.js" defer ></script>
      <title>Robot War</title>
      <link href="css/gioco.css" rel="stylesheet" type="text/css"/>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -121,7 +141,7 @@ function generaGame(){
         <article class="lifebar">
           <img src="img/lifebar.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
-        <img id="imgP" src="img/goldrake/godrake-fermo.png" height="400px" width="300px">
+        <img id="imgP" src="${personaggio1}" height="400px" width="300px">
         <div class="mosse">
           <section>
             <button id="attacco1" class="mossa">ATTACCO</button>
@@ -148,7 +168,7 @@ function generaGame(){
         <article class="lifebar">
           <img src="img/lifebar.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
-        <img src="img/gundam/gundam-fermo.png" height="400px" width="300px">
+        <img src="${personaggio2}" height="400px" width="300px">
         <div class="mosse">
           <section> 
             <button id="attacco2" class="mossa">ATTACCO</button>
