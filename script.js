@@ -3,9 +3,13 @@ let htmlTitolo=document.querySelector("header")
 let css= document.querySelector("head");
 let personaggio1;
 let personaggio2;
+
+//generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
 }
+
+//creazione della pagina di scelta del personaggio e selezione di essi
 function sceltaPersonaggio(){    
      let i=`
      <section id="schermi">
