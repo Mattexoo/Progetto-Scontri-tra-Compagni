@@ -41,10 +41,10 @@ function sceltaPersonaggio(){
    </section>
    <section class="schermi">
    <div id="btnsceltaG1Avvenuta">
-   <button class="btnsceltaAvvenuta btn btn-success" onclick="cambiaValore1()">CONFERMA</button>
+   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG1" onclick="cambiaValore1()" value=0>CONFERMA</button>
    </div>
    <div id="btnsceltaG2Avvenuta">
-   <button class="btnsceltaAvvenuta btn btn-success" onclick="cambiaValore2()">CONFERMA</button>
+   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG2" onclick="cambiaValore2()" value=0>CONFERMA</button>
    </div>
    </section>
      `
@@ -83,31 +83,31 @@ function sceltaPersonaggio(){
      let h = document.getElementById("img8");
      let m = document.getElementById("img10");
       
-      do{
+     let confermaG1= document.getElementById("confermaG1");
+     let confermaG2= document.getElementById("confermaG2");
 
-      }while()
 
      //scelta personaggio giocatore 1
-     a.addEventListener("click", function(){
-          personaggio1 = personaggiGiocatore1[0];
-          console.log(personaggio1);
-     });
-     b.addEventListener("click", function(){
-          personaggio1 = personaggiGiocatore1[1];
-          console.log(personaggio1);
-     });
-     c.addEventListener("click", function(){
-          personaggio1 = personaggiGiocatore1[2];
-          console.log(personaggio1);
-     });
-     d.addEventListener("click", function(){
-          personaggio1 = personaggiGiocatore1[3];
-          console.log(personaggio1);
-     });
-     l.addEventListener("click", function(){
-      personaggio1 = personaggiGiocatore1[personaggioCasuale()];
+      a.addEventListener("click", function(){
+      personaggio1 = personaggiGiocatore1[0];
       console.log(personaggio1);
-     });
+      });
+      b.addEventListener("click", function(){
+            personaggio1 = personaggiGiocatore1[1];
+            console.log(personaggio1);
+      });
+      c.addEventListener("click", function(){
+            personaggio1 = personaggiGiocatore1[2];
+            console.log(personaggio1);
+      });
+      d.addEventListener("click", function(){
+            personaggio1 = personaggiGiocatore1[3];
+            console.log(personaggio1);
+      });
+      l.addEventListener("click", function(){
+        personaggio1 = personaggiGiocatore1[personaggioCasuale()];
+        console.log(personaggio1);
+      });
 
      //scelta personaggio giocatore 2
      e.addEventListener("click", function(){
@@ -131,17 +131,18 @@ function sceltaPersonaggio(){
       console.log(personaggio2);
      });
 }
+
 let bottoneP1;
 let bottoneP2;
 function cambiaValore1(){
   bottoneP1=document.getElementById("btnsceltaG1Avvenuta");
-  let a=`<button id="btnsceltaG1Avvenuta" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
+  let a=`<button id="confermaG1" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
   bottoneP1.innerHTML=a;
 }
 
 function cambiaValore2(){
   bottoneP2=document.getElementById("btnsceltaG2Avvenuta");
-  let a=`<button id="btnsceltaG2Avvenuta" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
+  let a=`<button id="confermaG2" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
   bottoneP2.innerHTML=a
 }
 
@@ -164,7 +165,7 @@ function generaGame(){
         <article class="lifebar">
           <img src="img/lifebar.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
-        <img id="imgP" src="${personaggio1}" height="400px" width="300px">
+        <img src="${personaggio1}" height="400px" width="300px">
         <div class="mosse">
           <section>
             <button id="attacco1" class="mossa">ATTACCO</button>
