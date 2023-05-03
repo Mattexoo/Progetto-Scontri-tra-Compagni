@@ -154,7 +154,7 @@ function cambiaValore2(){
 }
 
 function controllaValore(){
-  setTimeout(controlla(), 500)
+  setTimeout(controlla(), 500);
 }
 
 function controlla(){
@@ -241,6 +241,7 @@ function generaGame(){
 function risultato(){
   window.open("classifica.html");
 }
+
 function classifica(){
   
 }
