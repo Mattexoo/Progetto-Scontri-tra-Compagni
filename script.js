@@ -163,7 +163,7 @@ function controlla(){
     vita1=10;
     vita2=10;
     generaGame();
-    gioco();
+    gioco()
   }
 }
 
@@ -175,6 +175,7 @@ function generaGame(){
      <meta name="viewport" content="width=device-width, initial-scale=1.2">
      <script src="dati.js" defer ></script>
      <script src="script.js" defer ></script>
+     <script src="gioco.js" defer ></script>
      <title>Robot War</title>
      <link href="css/gioco.css" rel="stylesheet" type="text/css"/>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -240,6 +241,7 @@ function generaGame(){
      htmlTitolo.innerHTML=c;
 }
 
+function gioco(){
 let btnAt1 = document.getElementById("attacco1");
 let btnAt2 = document.getElementById("attacco2");
 let btnDif1 = document.getElementById("difesa1");
@@ -270,16 +272,13 @@ btnDif2.addEventListener("click",function(){
 });
 btnUlt2.addEventListener("click",function(){
   scelta2=3;
+
 });
 
+  setInterval(startCombattimento(), 1000)
 
-function gioco(){
 
-    setTimeout(startCombattimento(), 10000)
-
-  
 }
-
 
 
 function startCombattimento(){
