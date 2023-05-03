@@ -5,7 +5,7 @@ let personaggio1;
 let personaggio2;
 let bottoneP1;
 let bottoneP2;
-let bool1= false
+let bool1= false;
 let bool2= false;
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
@@ -156,10 +156,14 @@ function cambiaValore2(){
 function controllaValore(){
   setTimeout(controlla(), 500);
 }
-
+let vita1= 10;
+let vita2= 10; 
 function controlla(){
   if(bool1==true && bool2==true){
+    vita1=10;
+    vita2=10;
     generaGame();
+    gioco();
   }
 }
 
@@ -236,7 +240,16 @@ function generaGame(){
      htmlTitolo.innerHTML=c;
 }
 
+function gioco(){
+  do{
+    setTimeout(startCombattimento(), 10000)
+  }while(vita1>0 && vita2>0)
+  
+}
 
+function startCombattimento(){
+  
+}
 
 function risultato(){
   window.open("classifica.html");
