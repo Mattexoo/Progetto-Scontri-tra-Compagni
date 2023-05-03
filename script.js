@@ -240,15 +240,50 @@ function generaGame(){
      htmlTitolo.innerHTML=c;
 }
 
+let btnAt1 = document.getElementById("attacco1");
+let btnAt2 = document.getElementById("attacco2");
+let btnDif1 = document.getElementById("difesa1");
+let btnDif2 = document.getElementById("difesa2");
+let btnUlt1 = document.getElementById("ulti1");
+let btnUlt2 = document.getElementById("ulti2");
+let scelta1=0;
+let scelta2=0;
+
+//mosse 1
+btnAt1.addEventListener("click",function(){
+  scelta1=1;
+});
+btnDif1.addEventListener("click",function(){
+  scelta1=2;
+});
+btnUlt1.addEventListener("click",function(){
+  scelta1=3;
+});
+
+
+//mosse2
+btnAt2.addEventListener("click",function(){
+  scelta2=1;
+});
+btnDif2.addEventListener("click",function(){
+  scelta2=2;
+});
+btnUlt2.addEventListener("click",function(){
+  scelta2=3;
+});
+
+
 function gioco(){
-  do{
+
     setTimeout(startCombattimento(), 10000)
-  }while(vita1>0 && vita2>0)
+
   
 }
 
+
+
 function startCombattimento(){
-  
+  console.log("a");
 }
 
 function risultato(){
