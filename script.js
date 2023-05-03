@@ -180,7 +180,7 @@ function generaGame(){
      <section id="schermi">
       <div id="schermo1">
         <article class="lifebar">
-          <img src="img/lifebar.png" alt="Lifebar non disponibile" height="100px" width="300px">
+        <img src="./img/barra vita/BarraVita-10.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
         <img src="${personaggio1}" height="400px" width="300px">
         <div class="mosse">
@@ -207,7 +207,7 @@ function generaGame(){
       -->
       <div id="schermo2">
         <article class="lifebar">
-          <img src="img/lifebar.png" alt="Lifebar non disponibile" height="100px" width="300px">
+          <img src="./img/barra vita/BarraVita-10.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
         <img src="${personaggio2}" height="400px" width="300px">
         <div class="mosse">
