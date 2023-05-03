@@ -3,6 +3,10 @@ let htmlTitolo=document.querySelector("header")
 let css=document.querySelector("head");
 let personaggio1;
 let personaggio2;
+let bottoneP1;
+let bottoneP2;
+let bool1= false
+let bool2= false;
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
@@ -133,18 +137,30 @@ function sceltaPersonaggio(){
      });
 }
 
-let bottoneP1;
-let bottoneP2;
 function cambiaValore1(){
   bottoneP1=document.getElementById("btnsceltaG1Avvenuta");
   let a=`<button id="confermaG1" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
   bottoneP1.innerHTML=a;
+  bool1=true;
+  controllaValore();
 }
 
 function cambiaValore2(){
   bottoneP2=document.getElementById("btnsceltaG2Avvenuta");
   let a=`<button id="confermaG2" class="btnsceltaAvvenuta btn btn-success" value="1">CONFERMA</button>`;
   bottoneP2.innerHTML=a
+  bool2=true;
+  controllaValore();
+}
+
+function controllaValore(){
+  setTimeout(controlla(), 500)
+}
+
+function controlla(){
+  if(bool1==true && bool2==true){
+    generaGame();
+  }
 }
 
 function generaGame(){  
