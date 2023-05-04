@@ -46,10 +46,10 @@ function sceltaPersonaggio(){
    </section>
    <section class="schermi">
    <div id="btnsceltaG1Avvenuta">
-   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG1" onclick="cambiaValore1()" value=0>CONFERMA</button>
+   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG1" onclick="cambiaValore1()" value=0 disabled>CONFERMA</button>
    </div>
    <div id="btnsceltaG2Avvenuta">
-   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG2" onclick="cambiaValore2()" value=0>CONFERMA</button>
+   <button class="btnsceltaAvvenuta btn btn-success" id="confermaG2" onclick="cambiaValore2()" value=0 disabled>CONFERMA</button>
    </div>
    </section>
      `
@@ -96,44 +96,54 @@ function sceltaPersonaggio(){
       a.addEventListener("click", function(){
       personaggio1 = personaggiGiocatore1[0];
       console.log(personaggio1);
+      confermaG1.disabled=false;
       });
       b.addEventListener("click", function(){
             personaggio1 = personaggiGiocatore1[1];
             console.log(personaggio1);
+            confermaG1.disabled=false;
       });
       c.addEventListener("click", function(){
             personaggio1 = personaggiGiocatore1[2];
             console.log(personaggio1);
+            confermaG1.disabled=false;
       });
       d.addEventListener("click", function(){
             personaggio1 = personaggiGiocatore1[3];
             console.log(personaggio1);
+            confermaG1.disabled=false;
       });
       l.addEventListener("click", function(){
         personaggio1 = personaggiGiocatore1[personaggioCasuale()];
         console.log(personaggio1);
+        confermaG1.disabled=false;
       });
 
      //scelta personaggio giocatore 2
      e.addEventListener("click", function(){
           personaggio2 = personaggiGiocatore2[0];
           console.log(personaggio2);
+          confermaG2.disabled=false;
      });
      f.addEventListener("click", function(){
           personaggio2 = personaggiGiocatore2[1];
           console.log(personaggio2);
+          confermaG2.disabled=false;
      });
      g.addEventListener("click", function(){
           personaggio2 = personaggiGiocatore2[2];
           console.log(personaggio2);
+          confermaG2.disabled=false;
      });
      h.addEventListener("click", function(){
           personaggio2 = personaggiGiocatore2[3];
           console.log(personaggio2);
+          confermaG2.disabled=false;
      });
      m.addEventListener("click", function(){
       personaggio2 = personaggiGiocatore2[personaggioCasuale()];
       console.log(personaggio2);
+      confermaG2.disabled=false;
      });
 }
 
