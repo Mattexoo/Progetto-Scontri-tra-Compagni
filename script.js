@@ -1,12 +1,16 @@
 let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
 let css=document.querySelector("head");
+let timerDiv;
 let personaggio1;
 let personaggio2;
 let bottoneP1;
 let bottoneP2;
 let bool1= false;
 let bool2= false;
+var tempo = 10;
+let timer10sec, timer1sec;
+
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
@@ -87,6 +91,7 @@ function sceltaPersonaggio(){
      let g = document.getElementById("img7");
      let h = document.getElementById("img8");
      let m = document.getElementById("img10");
+     
       
      let confermaG1= document.getElementById("confermaG1");
      let confermaG2= document.getElementById("confermaG2");
@@ -173,7 +178,8 @@ function controlla(){
     vita1=10;
     vita2=10;
     generaGame();
-    gioco()
+    timerDiv = document.getElementById("turno");
+    gioco();
   }
 }
 
@@ -214,12 +220,10 @@ function generaGame(){
           </section>
         </div>
       </div>
-      <!--
       <div id="turno">
         <h3>Tocca a:</h3>
         <h1>Giocatore 1 / Giocatore 2</h1>
       </div>
-      -->
       <div id="schermo2">
         <article class="lifebar">
           <img src="./img/barra vita/BarraVita-10.png" alt="Lifebar non disponibile" height="100px" width="300px">
@@ -285,14 +289,37 @@ btnUlt2.addEventListener("click",function(){
 
 });
 
-  setInterval(startCombattimento(), 1000)
+avviaTimer();
 
 
 }
-
+function avviaTimer(){
+  timer10sec = setInterval(startCombattimento, 10000);
+}
 
 function startCombattimento(){
-  console.log("a");
+  
+  console.log("RESET");
+
+  if (tempo != 0) {
+    timer1sec = setInterval(function(){
+      timerDiv.textContent = tempo;
+      tempo--;
+      if (tempo == 0){
+        console.log("2) tempo == 0");
+        clearInterval(timer1sec);
+
+        tempo = 10;
+        
+        clearInterval(timer10sec);
+        setTimeout(function(){
+          avviaTimer();
+        }, 3000);
+      }
+      
+    }, 1000); 
+  }
+
 }
 
 function risultato(){
