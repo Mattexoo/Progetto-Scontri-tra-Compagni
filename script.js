@@ -8,7 +8,7 @@ let bottoneP1;
 let bottoneP2;
 let bool1= false;
 let bool2= false;
-var tempo = 10;
+var tempo = 11;
 let timer10sec, timer1sec;
 
 //generazione di un numero casuale da 0-3
@@ -289,37 +289,30 @@ btnUlt2.addEventListener("click",function(){
 
 });
 
-avviaTimer();
-
+setTimeout(avviaTimer, 10000);
 
 }
+
 function avviaTimer(){
-  timer10sec = setInterval(startCombattimento, 10000);
-}
+  setInterval(function(){
+    console.log("RESET");
+    
+    tempo--;
+    timerDiv.textContent = tempo;
 
-function startCombattimento(){
-  
-  console.log("RESET");
+      if (tempo == 0) {
+        tempo = 11;
+        /* FINSCE IL TEMPO */
+        /* FINSCE IL TEMPO */
+        /* FINSCE IL TEMPO */
+        /* FINSCE IL TEMPO */
+        /* FINSCE IL TEMPO */
 
-  if (tempo != 0) {
-    timer1sec = setInterval(function(){
-      timerDiv.textContent = tempo;
-      tempo--;
-      if (tempo == 0){
-        console.log("2) tempo == 0");
-        clearInterval(timer1sec);
-
-        tempo = 10;
-        
-        clearInterval(timer10sec);
-        setTimeout(function(){
-          avviaTimer();
-        }, 3000);
+        /* ANIMAZIONE 1 ANIMAZIONE 2 */
+          
       }
-      
-    }, 1000); 
-  }
 
+  }, 1000);
 }
 
 function risultato(){
