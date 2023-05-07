@@ -1,3 +1,5 @@
+//inizializzazione delle variabili
+
 let html=document.querySelector("main");
 let htmlTitolo=document.querySelector("header")
 let css=document.querySelector("head");
@@ -11,6 +13,11 @@ let bool2= false;
 var tempo = 11;
 let timer10sec, timer1sec;
 
+const ATT=2;
+const DIF=2;
+const ULT=5;
+
+console.log(tempo);
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
@@ -19,7 +26,6 @@ function personaggioCasuale(){
 //creazione della pagina di scelta del personaggio e selezione di essi
 function sceltaPersonaggio(){    
      let i=` 
-      <button  onclick="risultato()" ></button>
      <section class="schermi">
      <div id="schermo1">
        <section class="selezioneP">
@@ -173,11 +179,13 @@ function controllaValore(){
 }
 let vita1= 10;
 let vita2= 10; 
+
 function controlla(){
   if(bool1==true && bool2==true){
     vita1=10;
     vita2=10;
     generaGame();
+    console.log(tempo);
     timerDiv = document.getElementById("turno");
     gioco();
   }
@@ -289,36 +297,146 @@ btnUlt2.addEventListener("click",function(){
 
 });
 
-setTimeout(avviaTimer, 10000);
+  setTimeout(avviaTimer(scelta1, scelta2), 10000);
 
 }
 
-function avviaTimer(){
-  setInterval(function(){
-    console.log("RESET");
+function avviaTimer(scelta1 ,scelta2){
+  for (let i = 0; i < 11; i++) {
     
+    console.log("RESET");
+    console.log(tempo);
+
     tempo--;
     timerDiv.textContent = tempo;
 
       if (tempo == 0) {
-        tempo = 11;
-        /* FINSCE IL TEMPO */
-        /* FINSCE IL TEMPO */
-        /* FINSCE IL TEMPO */
-        /* FINSCE IL TEMPO */
-        /* FINSCE IL TEMPO */
+        tempo = 11; 
 
+        /* FINSCE IL TEMPO */
+        calcoloDanni(scelta1 ,scelta2);
+        animazioni();
+        controlloVincita();
+        
         /* ANIMAZIONE 1 ANIMAZIONE 2 */
-          
+
       }
 
-  }, 1000);
+    
+  }
+    
+ 
 }
 
-function risultato(){
-  window.open("classifica.html");
-}
+/*  /////////////////////////////////////////////////*/
 
-function classifica(){
+/* FUNZIONE CLASSIFICA DA FARE DOPO LA FINE DEL GIOCO*/
+
+//function risultato(){
+  //window.open("classifica.html");
+//}
+
+//function classifica(){
   
+//}
+
+/* ///////////////////////////////////////////////// */
+
+function calcoloDanni( scelta1 ,scelta2){
+  
+  
+
+  let somma =scelta1 + scelta2;
+
+  switch (somma) {
+
+    case 2:
+
+      vita1-=2;
+
+      vita2-=2;
+
+      break;
+
+    case 3:
+
+      vita1-=0;
+
+      vita2-=0;
+
+      break;
+
+    case 4:
+      
+      if (scelta1==2 ) {
+
+        vita1-=0;
+
+        vita2-=0;
+
+      }else{
+        if (scelta1==1) {
+
+          vita1-=5;
+
+        }else{
+
+          vita2-=5;
+
+        }
+      }
+      
+      break;
+
+    case 5:
+
+      if (scelta1==2) {
+
+        vita1-=3;
+
+      }else{
+
+        vita2-=3;
+
+      }
+
+      break;
+
+    case 6:
+
+      vita1-=0;
+
+      vita2-=0;
+
+      break;
+  
+    default:
+
+      break;
+  }
+
+}
+
+function animazioni(){
+
+  let scudo2 = document.getElementById("scudo2");
+  
+  setTimeout(frame(scudo2), 3000);
+
+  scudo2.style.display = "none";
+
+}
+
+function frame(scudo2){
+
+  scudo2.style.display = "block";
+ 
+  console.log("bello");
+
+}
+
+function controlloVincita(){
+
+  console.log("ciao");
+
 }

@@ -184,7 +184,7 @@ button:hover{
 
 #ulti2:focus + #spada{
   display: block;
-  animation: ulti2 1s infinite;
+  animation: ulti2 1s linear;
   animation-timing-function: linear;
   animation-iteration-count: 3;
   right: 26%;
@@ -192,7 +192,7 @@ button:hover{
   transform: rotate(35deg);
 }
 
-#difesa2:focus + #scudo2{
+#difesa2:hover + #scudo2{
   display: block;
   animation: scudo2 3s linear;
   animation-timing-function: linear;
