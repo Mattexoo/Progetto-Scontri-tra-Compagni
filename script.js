@@ -209,7 +209,7 @@ function generaGame(){
      <section id="schermi">
       <div id="schermo1">
         <article class="lifebar">
-        <img src="./img/barra vita/BarraVita-10.png" alt="Lifebar non disponibile" height="100px" width="300px">
+        <img src="./img/barra vita/BarraVita-${vita1}.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
         <img src="${personaggio1}" height="400px" width="300px">
         <div class="mosse">
@@ -234,7 +234,7 @@ function generaGame(){
       </div>
       <div id="schermo2">
         <article class="lifebar">
-          <img src="./img/barra vita/BarraVita-10.png" alt="Lifebar non disponibile" height="100px" width="300px">
+          <img src="./img/barra vita/BarraVita-${vita2}.png" alt="Lifebar non disponibile" height="100px" width="300px">
         </article>
         <img src="${personaggio2}" height="400px" width="300px">
         <div class="mosse">
@@ -297,35 +297,33 @@ btnUlt2.addEventListener("click",function(){
 
 });
 
-  setTimeout(avviaTimer(scelta1, scelta2), 10000);
+  setTimeout(avviaTimer(scelta1, scelta2), 13000);
 
 }
-
+let provaAnimazione
 function avviaTimer(scelta1 ,scelta2){
-  for (let i = 0; i < 11; i++) {
-    
-    console.log("RESET");
-    console.log(tempo);
+  
+    setInterval(function(){
+  console.log("RESET");
+  console.log(tempo);
 
-    tempo--;
-    timerDiv.textContent = tempo;
+  tempo--;
+  timerDiv.textContent = tempo;
 
-      if (tempo == 0) {
-        tempo = 11; 
+  if (tempo == 3) {
+    tempo = 14;
 
-        /* FINSCE IL TEMPO */
-        calcoloDanni(scelta1 ,scelta2);
-        animazioni();
-        controlloVincita();
-        
-        /* ANIMAZIONE 1 ANIMAZIONE 2 */
+    /* FINSCE IL TEMPO */
+    calcoloDanni(scelta1, scelta2);
+    animazioni();
+    generaGame();
+    controlloVincita();
 
-      }
+    /* ANIMAZIONE 1 ANIMAZIONE 2 */
 
-    
   }
+},1000)
     
- 
 }
 
 /*  /////////////////////////////////////////////////*/
@@ -351,7 +349,7 @@ function calcoloDanni( scelta1 ,scelta2){
   switch (somma) {
 
     case 2:
-
+      provaAnimazione=1;
       vita1-=2;
 
       vita2-=2;
@@ -359,6 +357,7 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 3:
+      provaAnimazione=2;
 
       vita1-=0;
 
@@ -367,14 +366,17 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 4:
-      
+  
       if (scelta1==2 ) {
+        provaAnimazione=3;
 
         vita1-=0;
 
         vita2-=0;
 
       }else{
+        provaAnimazione=4;
+
         if (scelta1==1) {
 
           vita1-=5;
@@ -389,6 +391,7 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 5:
+      provaAnimazione=5;
 
       if (scelta1==2) {
 
@@ -403,6 +406,7 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 6:
+      provaAnimazione=6;
 
       vita1-=0;
 
@@ -418,12 +422,20 @@ function calcoloDanni( scelta1 ,scelta2){
 }
 
 function animazioni(){
-
-  let scudo2 = document.getElementById("scudo2");
-  
-  setTimeout(frame(scudo2), 3000);
-
-  scudo2.style.display = "none";
+switch(provaAnimazione){
+  case 1:
+    break;
+  case 2:
+    break;
+  case 3:
+    break;
+  case 4:
+    break;
+  case 5:
+    break;
+  case 6:
+    break;
+}
 
 }
 

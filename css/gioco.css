@@ -194,7 +194,7 @@ button:hover{
 
 #difesa2:hover + #scudo2{
   display: block;
-  animation: scudo2 3s linear;
+  animation: Aniscudo2 3s linear;
   animation-timing-function: linear;
   right: 26%;
   top: 16.5%;   
@@ -251,7 +251,7 @@ button:hover{
   }   
 }
 
-@keyframes scudo2{ 
+@keyframes Aniscudo2{ 
   0%{   
     right: 20%;
     top: 40%;   
