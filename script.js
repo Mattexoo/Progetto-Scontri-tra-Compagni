@@ -300,7 +300,8 @@ btnUlt2.addEventListener("click",function(){
   setTimeout(avviaTimer(scelta1, scelta2), 13000);
 
 }
-let provaAnimazione
+let provaAnimazione1
+let provaAnimazione2
 function avviaTimer(scelta1 ,scelta2){
   
     setInterval(function(){
@@ -349,7 +350,9 @@ function calcoloDanni( scelta1 ,scelta2){
   switch (somma) {
 
     case 2:
-      provaAnimazione=1;
+      provaAnimazione1="at1";
+      provaAnimazione2="at2";
+
       vita1-=2;
 
       vita2-=2;
@@ -357,33 +360,48 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 3:
-      provaAnimazione=2;
-
+     if (scelta1=1) {
       vita1-=0;
-
       vita2-=0;
+
+      provaAnimazione1="at1";
+      provaAnimazione2="dif2";
+
+
+     }else{
+      vita1-=0;
+      vita2-=0;
+
+      provaAnimazione1="dif1";
+      provaAnimazione2="at2";
+
+     }
+
+
 
       break;
 
     case 4:
   
       if (scelta1==2 ) {
-        provaAnimazione=3;
+        provaAnimazione1="dif1";
+        provaAnimazione2="dif2";
 
         vita1-=0;
 
         vita2-=0;
 
       }else{
-        provaAnimazione=4;
 
         if (scelta1==1) {
 
           vita1-=5;
+          provaAnimazione1="ult2";
 
         }else{
 
           vita2-=5;
+          provaAnimazione1="ult1";
 
         }
       }
@@ -391,22 +409,25 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 5:
-      provaAnimazione=5;
-
+      
       if (scelta1==2) {
 
         vita1-=3;
+        provaAnimazione1="ult2";
+        provaAnimazione1="dif1";
 
       }else{
 
         vita2-=3;
-
+        provaAnimazione1="ult1";
+        provaAnimazione1="dif2";
       }
 
       break;
 
     case 6:
-      provaAnimazione=6;
+      provaAnimazione1="ult2";
+      provaAnimazione1="ult1";
 
       vita1-=0;
 
@@ -439,13 +460,7 @@ switch(provaAnimazione){
 
 }
 
-function frame(scudo2){
 
-  scudo2.style.display = "block";
- 
-  console.log("bello");
-
-}
 
 function controlloVincita(){
 
