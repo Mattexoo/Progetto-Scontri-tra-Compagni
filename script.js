@@ -332,7 +332,7 @@ function avviaTimer(scelta1 ,scelta2){
       tempo--;
       timerDiv.textContent = tempo;
   
-      if (tempo == 3 ) {
+      if (tempo == 1 ) {
         tempo = 9;
   
         /* FINSCE IL TEMPO */
@@ -472,49 +472,78 @@ function calcoloDanni( scelta1 ,scelta2){
 function animazioni1(){
   /*inizializzazione delle variabili per le animazioni*/ 
 
-/*Attacchi*/
-let fulmine = document.getElementById("fulmine");
-let nuvola = document.getElementById("nuvola");
-let colpo = document.getElementById("colpo");
+  /*Attacchi*/
+  let fulmine = document.getElementById("fulmine");
+  let nuvola = document.getElementById("nuvola");
+  
+  /*Difese*/
+  let forza = document.getElementById("scudo1");
 
-/*Difese*/
-let scudo1 = document.getElementById("scudo1");
-let scudo2 = document.getElementById("scudo2");
+  /*Ultimate*/
+  let pugno = document.getElementById("pugno");
 
-/*Ultimate*/
-let pugno = document.getElementById("pugno");
-let spada = document.getElementById("spada");
   switch(provaAnimazione1){
     case "at":
-      console.log("gesu attacco");
-      setTimeout(pluto, 10);
+      console.log("attacco");
+      setTimeout(atNuvola, 10);
       nuvola.display="none"
       fulmine.display="none"
 
       provaAnimazione1=" ";
       break;
     case "dif":
-      console.log("gesu difesa");
+      console.log("difesa");
+      setTimeout(difForza, 10);
+      forza.style.display = "none";
+
       provaAnimazione1=" ";
       break;
     case "ult":
-      console.log("gesu ulti");
+      console.log("ulti");
+      setTimeout(ultPugno, 10);
+      pugno.style.display = "none";
+
       provaAnimazione1=" ";
       break;
   } 
 }
+
+
+
+
 function animazioni2(){
+    /*inizializzazione delle variabili per le animazioni*/ 
+
+  /*Attacchi*/
+  let colpo = document.getElementById("colpo");
+
+  /*Difese*/
+  let acciaio = document.getElementById("scudo2");
+
+  /*Ultimate*/
+  let spada = document.getElementById("spada");
+
+
   switch(provaAnimazione2){
     case "at":
-      console.log("madonna attacco");
-      provaAnimazione2=" ";
+      console.log("attacco");
+      setTimeout(atColpo, 10);
+      colpo.style.display = "none";
+
+      provaAnimazione2 = " ";
       break;
     case "dif":
-      console.log("madonna difesa");
+      console.log("difesa");
+      setTimeout(difAcciaio, 10);
+      acciaio.style.display = "none";
+
       provaAnimazione2=" ";
       break;
     case "ult":
-      console.log("madonna ulti");
+      console.log("ulti");
+      setTimeout(ultSpada, 10);
+      spada.style.display = "none";
+
       provaAnimazione2=" ";
       break;
     
@@ -530,12 +559,19 @@ function controlloVincita(){
 
 
   } else {
-    console.log("sex");
+    console.log("bello");
 
   }
 
 }
-function pluto(){
+
+/* ///////////////////////////////////////////////// */
+/* /////////////////////ANIMAZIONI////////////////// */
+/* ///////////////////////////////////////////////// */
+
+  /*Attacchi*/
+
+function atNuvola(){
   nuvola.style.display= "block";
   nuvola.style.left= "62.5%";
   nuvola.style.top= "0%;"
@@ -545,10 +581,46 @@ function pluto(){
   fulmine.style.animation= "Aniattacco1 1s linear";
 }
 
-
-
-function classifica(){
-  
+function atColpo(){
+  colpo.style.display ="block";
+  colpo.style.right = "30%";
+  colpo.style.top = "37";
+  colpo.style.animation = "Aniattacco2 1s linear ";
 }
 
-/* ///////////////////////////////////////////////// */
+  /*Difese*/
+
+function difForza(){
+  forza.style.display ="block";
+  forza.style.left= "23%";
+  forza.style.top= "13%;";
+  forza.style.animation = "Aniscudo1 1s linear ";
+}
+
+function difAcciaio(){
+  acciaio.style.display ="block";
+  acciaio.style.right = "26%";
+  acciaio.style.top = "16.5%";
+  acciaio.style.animation = "Aniscudo2 1s linear ";
+}
+
+  /*Ultimate*/
+
+function ultPugno(){
+  pugno.style.display ="block";
+  pugno.style.left= "28%";
+  pugno.style.top= "38%;";
+  pugno.style.animation = "Aniulti1 1s linear ";
+}
+
+function ultSpada(){
+  spada.style.display ="block";
+  spada.style.right= "26%";
+  spada.style.top= "35%;";
+  spada.style.animation = "Aniulti2 1s linear ";
+  spada.style.transform = "rotate(35deg)";
+}
+
+
+
+

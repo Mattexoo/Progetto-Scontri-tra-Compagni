@@ -158,7 +158,7 @@ button:hover{
 
 #ulti1:focus + #pugno{
   display: block;
-  animation: Aniulti1 1s infinite;
+  animation: Aniulti1 1s linear;
   animation-timing-function: linear;
   animation-iteration-count: 3;
   left: 28%;
@@ -172,6 +172,7 @@ button:hover{
   animation: Aniscudo1 3s linear;
   animation-timing-function: linear;
 }
+
 /* Gundam*/
 
 #attacco2:focus + #colpo{
