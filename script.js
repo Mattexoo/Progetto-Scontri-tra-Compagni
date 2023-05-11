@@ -278,7 +278,6 @@ function gioco(){
 
 let provaAnimazione1 =" ";
 let provaAnimazione2 =" ";
-let ulti1 = document.getElementById("ulti1");
 function avviaTimer(scelta1 ,scelta2){ 
   setInterval(function(){  
       let btnAt1 = document.getElementById("attacco1");
@@ -521,7 +520,9 @@ function animazioni1(){
   } 
 }
 
-
+function delay(ms, callback) {
+  setTimeout(callback, ms);
+}
 
 
 function animazioni2(){
@@ -541,13 +542,13 @@ function animazioni2(){
     case "at":
       console.log("attacco");
       setTimeout(atColpo, 10);
-      colpo.style.display = "none";
+        colpo.style.display = "none";
 
       provaAnimazione2 = " ";
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difAcciaio(accaio), 10);
+      setTimeout(difAcciaio(acciaio), 10);
       acciaio.style.display = "none";
 
       provaAnimazione2=" ";
@@ -586,6 +587,8 @@ function controlloVincita(){
   /*Attacchi*/
 
 function atNuvola(){
+  let fulmine = document.getElementById("fulmine");
+  let nuvola = document.getElementById("nuvola");
   nuvola.style.display= "block";
   nuvola.style.left= "62.5%";
   nuvola.style.top= "0%";
@@ -596,6 +599,7 @@ function atNuvola(){
 }
 
 function atColpo(){
+  let colpo = document.getElementById("colpo");
   colpo.style.display ="block";
   colpo.style.right = "30%";
   colpo.style.top = "37%";
@@ -605,6 +609,7 @@ function atColpo(){
   /*Difese*/
 
 function difForza(){
+  let forza = document.getElementById("scudo1");
   forza.style.display ="block";
   forza.style.left= "23%";
   forza.style.top= "13%";
@@ -612,6 +617,7 @@ function difForza(){
 }
 
 function difAcciaio(){
+  let acciaio = document.getElementById("scudo2");
   acciaio.style.display ="block";
   acciaio.style.right = "26%";
   acciaio.style.top = "16.5%";
@@ -621,6 +627,7 @@ function difAcciaio(){
   /*Ultimate*/
 
 function ultPugno(){
+  let pugno = document.getElementById("pugno");
   pugno.style.display ="block";
   pugno.style.left= "28%";
   pugno.style.top= "38%";
@@ -628,6 +635,7 @@ function ultPugno(){
 }
 
 function ultSpada(){
+  let spada = document.getElementById("spada");
   spada.style.display ="block";
   spada.style.right= "26%";
   spada.style.top= "35%";
