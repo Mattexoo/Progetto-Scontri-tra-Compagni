@@ -139,31 +139,7 @@ button:hover{
   height: 550px;
   width: 400px;
 }
-/* Goldrake*/
-#attacco1:focus + #fulmine{
-  display: block;
-  animation: Aniattacco1 1s;
-  animation-timing-function: linear;
-  left: 70%;
-  top: 10%;   
-  height: 100px;
-  width: 100px;
-}
 
-#attacco1:focus ~ #nuvola{
-  display: block;
-  left: 62.5%;
-  top: 0%;   
-}
-
-#ulti1:focus + #pugno{
-  display: block;
-  animation: Aniulti1 1s linear;
-  animation-timing-function: linear;
-  animation-iteration-count: 3;
-  left: 28%;
-  top: 38%; 
-}
 
 #difesa1:focus + #scudo1{
   display: block;
@@ -175,23 +151,6 @@ button:hover{
 
 /* Gundam*/
 
-#attacco2:focus + #colpo{
-  display: block;
-  right: 30%;
-  top: 37%;
-  animation: Aniattacco2 1s linear;
-  animation-timing-function: linear;
-}
-
-#ulti2:focus + #spada{
-  display: block;
-  animation: Aniulti2 1s linear;
-  animation-timing-function: linear;
-  animation-iteration-count: 3;
-  right: 26%;
-  top: 35%;
-  transform: rotate(35deg);
-}
 
 #difesa2:focus + #scudo2{
   display: block;

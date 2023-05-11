@@ -10,7 +10,7 @@ let bottoneP1;
 let bottoneP2;
 let bool1= false;
 let bool2= false;
-var tempo = 11;
+var tempo = 10;
 let tempoImpiegato=0;
 
 //generazione di un numero casuale da 0-3
@@ -224,7 +224,7 @@ function generaGame(){
         </div>
       </div>
       <div id="turno">
-        
+      <img src="./img/timer/timer-${tempo}.png" alt="">
       </div>
       <div id="schermo2">
         <article class="lifebar">
@@ -271,7 +271,6 @@ function gioco(){
   } else {
 
     clearTimeout(mytimer);
-    console
 
   }
 
@@ -329,11 +328,11 @@ function avviaTimer(scelta1 ,scelta2){
       console.log("RESET");
 
   
-      tempo--;
-      timerDiv.textContent = tempo;
+      tempo-=1;
+      cambiaTempo(tempo);
   
-      if (tempo == 1 ) {
-        tempo = 9;
+      if (tempo == 3 ) {
+        tempo = 10;
   
         /* FINSCE IL TEMPO */
         calcoloDanni(scelta1, scelta2);
@@ -343,6 +342,7 @@ function avviaTimer(scelta1 ,scelta2){
         scelta1=0;
         scelta2=0;
         generaGame();
+        cambiaTempo(tempo);
         controlloVincita();
         /* ANIMAZIONE 1 ANIMAZIONE 2 */
   
@@ -351,8 +351,12 @@ function avviaTimer(scelta1 ,scelta2){
   tempoImpiegato++;  
 }
 
-
-console.log("")
+function cambiaTempo(tempo){
+    timerDiv = document.getElementById("turno");
+    timerDiv.innerHTML=" "
+    let immagine= `<img src="./img/timer/timer-${tempo}.png" alt="">`
+    timerDiv.innerHTML=immagine;
+}
 
 function calcoloDanni( scelta1 ,scelta2){
   let somma = scelta1 + scelta2;
@@ -502,7 +506,7 @@ function animazioni1(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difForza, 10);
+      setTimeout(difForza(forza), 10);
       forza.style.display = "none";
 
       provaAnimazione1=" ";
@@ -543,7 +547,7 @@ function animazioni2(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difAcciaio, 10);
+      setTimeout(difAcciaio(accaio), 10);
       acciaio.style.display = "none";
 
       provaAnimazione2=" ";
@@ -584,17 +588,17 @@ function controlloVincita(){
 function atNuvola(){
   nuvola.style.display= "block";
   nuvola.style.left= "62.5%";
-  nuvola.style.top= "0%;"
+  nuvola.style.top= "0%";
   fulmine.style.display= "block";
   fulmine.style.left= "70%";
-  nuvola.style.top= "10%;"
+  nuvola.style.top= "10%";
   fulmine.style.animation= "Aniattacco1 1s linear";
 }
 
 function atColpo(){
   colpo.style.display ="block";
   colpo.style.right = "30%";
-  colpo.style.top = "37";
+  colpo.style.top = "37%";
   colpo.style.animation = "Aniattacco2 1s linear ";
 }
 
@@ -603,7 +607,7 @@ function atColpo(){
 function difForza(){
   forza.style.display ="block";
   forza.style.left= "23%";
-  forza.style.top= "13%;";
+  forza.style.top= "13%";
   forza.style.animation = "Aniscudo1 1s linear ";
 }
 
@@ -619,15 +623,15 @@ function difAcciaio(){
 function ultPugno(){
   pugno.style.display ="block";
   pugno.style.left= "28%";
-  pugno.style.top= "38%;";
-  pugno.style.animation = "Aniulti1 1s linear ";
+  pugno.style.top= "38%";
+  pugno.style.animation = "Aniulti1 1s linear 3";
 }
 
 function ultSpada(){
   spada.style.display ="block";
   spada.style.right= "26%";
-  spada.style.top= "35%;";
-  spada.style.animation = "Aniulti2 1s linear ";
+  spada.style.top= "35%";
+  spada.style.animation = "Aniulti2 1s linear 3";
   spada.style.transform = "rotate(35deg)";
 }
 
