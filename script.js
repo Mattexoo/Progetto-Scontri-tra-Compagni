@@ -288,7 +288,7 @@ function avviaTimer(scelta1 ,scelta2){
       let btnDif2 = document.getElementById("difesa2");
       let btnUlt1 = document.getElementById("ulti1");
       let btnUlt2 = document.getElementById("ulti2");
-    
+
     
       //mosse 1
       btnAt1.addEventListener("click",function(){
@@ -332,19 +332,19 @@ function avviaTimer(scelta1 ,scelta2){
       tempo--;
       timerDiv.textContent = tempo;
   
-      if (tempo == 1 ) {
+      if (tempo == 3 ) {
         tempo = 9;
   
         /* FINSCE IL TEMPO */
         calcoloDanni(scelta1, scelta2);
-        console.log(scelta1, scelta2)
+        console.log(scelta1, scelta2);       
         animazioni1();
         animazioni2();
         scelta1=0;
         scelta2=0;
         generaGame();
         controlloVincita();
-        /* ANIMAZIONE 1 ANIMAZIONE 2 */
+
   
       }
   },1000) 
@@ -383,34 +383,30 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 3:
-
-      
-
-
-
-     if (scelta1=1) {
-      vita1-=0;
-      vita2-=0;
-
-      provaAnimazione1="at";
-      provaAnimazione2="dif";
-
-
-     }else if(scelta1==3){
-      vita1-=1;
-      provaAnimazione1="ult";
-      vita2-=3;
-     }
-     else if(scelta2==3){
-      vita2-=1;
-      vita1-=3;
-      provaAnimazione2="dif";
+     if(scelta1==3 || scelta2==3){
+      if(scelta1==3){
+        vita1-=1;
+        vita2-=3
+        provaAnimazione1="ult";
+        provaAnimazione2=" ";
+      }else{
+        vita1-=3;
+        vita2-=1
+        provaAnimazione2="ult";
+        provaAnimazione1=" ";
+      }
      }else{
-      vita1-=0;
-      vita2-=0;
-
-      provaAnimazione1="dif";
-      provaAnimazione2="at";
+      if(scelta1==1){
+        vita1-=0;
+        vita2-=0
+        provaAnimazione1="at";
+        provaAnimazione2="dif";
+      }else{
+        vita2-=0;
+        vita1-=0
+        provaAnimazione1="dif";
+        provaAnimazione2="at";
+      }
      }
       break;
 
@@ -473,24 +469,23 @@ function calcoloDanni( scelta1 ,scelta2){
   }
 }
 
-
 function animazioni1(){
-  /*inizializzazione delle variabili per le animazioni*/ 
 
-  /*Attacchi*/
-  let fulmine = document.getElementById("fulmine");
-  let nuvola = document.getElementById("nuvola");
-  
-  /*Difese*/
-  let forza = document.getElementById("scudo1");
+      /*inizializzazione delle variabili per le animazioni*/ 
 
-  /*Ultimate*/
-  let pugno = document.getElementById("pugno");
+        /*Attacchi*/
+        let fulmine = document.getElementById("fulmine");
+        let nuvola = document.getElementById("nuvola");
+        
+        /*Difese*/
+        let forza = document.getElementById("scudo1");
 
+        /*Ultimate*/
+        let pugno = document.getElementById("pugno");
   switch(provaAnimazione1){
     case "at":
       console.log("attacco");
-      setTimeout(atNuvola, 10);
+      setTimeout(atNuvola(nuvola, fulmine), 1000);
       nuvola.display="none"
       fulmine.display="none"
 
@@ -505,7 +500,7 @@ function animazioni1(){
       break;
     case "ult":
       console.log("ulti");
-      setTimeout(ultPugno, 10);
+      setTimeout(ultPugno(pugno), 10);
       pugno.style.display = "none";
 
       provaAnimazione1=" ";
@@ -532,7 +527,7 @@ function animazioni2(){
   switch(provaAnimazione2){
     case "at":
       console.log("attacco");
-      setTimeout(atColpo, 10);
+      setTimeout(atColpo(colpo), 10);
       colpo.style.display = "none";
 
       provaAnimazione2 = " ";
@@ -546,7 +541,7 @@ function animazioni2(){
       break;
     case "ult":
       console.log("ulti");
-      setTimeout(ultSpada, 10);
+      setTimeout(ultSpada(spada), 10);
       spada.style.display = "none";
 
       provaAnimazione2=" ";
@@ -577,17 +572,17 @@ function controlloVincita(){
 
   /*Attacchi*/
 
-function atNuvola(){
-  nuvola.style.display= "block";
+function atNuvola(nuvola, fulmine){ 
+ nuvola.style.display= "block";
   nuvola.style.left= "62.5%";
   nuvola.style.top= "0%;"
   fulmine.style.display= "block";
   fulmine.style.left= "70%";
   nuvola.style.top= "10%;"
-  fulmine.style.animation= "Aniattacco1 1s linear";
+  fulmine.style.animation= "Aniattacco1 3s linear";
+  
 }
-
-function atColpo(){
+function atColpo(colpo){
   colpo.style.display ="block";
   colpo.style.right = "30%";
   colpo.style.top = "37";
@@ -600,7 +595,7 @@ function difForza(forza){
   forza.style.display ="block";
   forza.style.left= "23%";
   forza.style.top= "13%;";
-  forza.style.animation = "Aniscudo1 1s linear ";
+  forza.style.animation = "Aniscudo1 1s linear";
 }
 
 function difAcciaio(acciaio){
@@ -612,18 +607,18 @@ function difAcciaio(acciaio){
 
   /*Ultimate*/
 
-function ultPugno(){
+function ultPugno(pugno){
   pugno.style.display ="block";
   pugno.style.left= "28%";
   pugno.style.top= "38%;";
-  pugno.style.animation = "Aniulti1 1s linear ";
+  pugno.style.animation = "Aniulti1 1s linear 3";
 }
 
-function ultSpada(){
+function ultSpada(spada){
   spada.style.display ="block";
   spada.style.right= "26%";
   spada.style.top= "35%;";
-  spada.style.animation = "Aniulti2 1s linear ";
+  spada.style.animation = "Aniulti2 1s linear 3";
   spada.style.transform = "rotate(35deg)";
 }
 
