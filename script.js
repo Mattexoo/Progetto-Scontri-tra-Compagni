@@ -385,34 +385,37 @@ function calcoloDanni( scelta1 ,scelta2){
 
     case 3:
 
-      
+     if (scelta1 ==3 || scelta2 ==3) {
+        
+        if (scelta1==3) {
+          vita1 -=1;
+          vita2 -=3;
 
+          provaAnimazione1="ult";
+          provaAnimazione2=" ";
+          
+        } else {
+          vita1 -=3;
+          vita2 -=1;
 
+          provaAnimazione1=" ";
+          provaAnimazione2="ult ";
+        }
 
-     if (scelta1=1) {
-      vita1-=0;
-      vita2-=0;
+      }else {
 
-      provaAnimazione1="at";
-      provaAnimazione2="dif";
-
-
-     }else if(scelta1==3){
-      vita1-=1;
-      provaAnimazione1="ult";
-      vita2-=3;
-     }
-     else if(scelta2==3){
-      vita2-=1;
-      vita1-=3;
-      provaAnimazione2="dif";
-     }else{
-      vita1-=0;
-      vita2-=0;
-
-      provaAnimazione1="dif";
-      provaAnimazione2="at";
-     }
+        if (scelta1 ==1) {
+          vita1 -=0;
+          vita2 -=0;
+          provaAnimazione1="at";
+          provaAnimazione2="dif";
+        } else {
+          vita1 -=0;
+          vita2 -=0;
+          provaAnimazione1="dif";
+          provaAnimazione2="at";
+        }
+      }
       break;
 
     case 4:
@@ -499,7 +502,7 @@ function animazioni1(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difForza(forza), 10);
+      setTimeout(difForza, 10);
       forza.style.display = "none";
 
       provaAnimazione1=" ";
@@ -540,7 +543,7 @@ function animazioni2(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difAcciaio(acciaio), 10);
+      setTimeout(difAcciaio, 10);
       acciaio.style.display = "none";
 
       provaAnimazione2=" ";
@@ -597,14 +600,14 @@ function atColpo(){
 
   /*Difese*/
 
-function difForza(forza){
+function difForza(){
   forza.style.display ="block";
   forza.style.left= "23%";
   forza.style.top= "13%;";
   forza.style.animation = "Aniscudo1 1s linear ";
 }
 
-function difAcciaio(acciaio){
+function difAcciaio(){
   acciaio.style.display ="block";
   acciaio.style.right = "26%";
   acciaio.style.top = "16.5%";
