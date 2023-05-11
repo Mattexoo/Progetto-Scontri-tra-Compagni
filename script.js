@@ -485,7 +485,7 @@ function animazioni1(){
   switch(provaAnimazione1){
     case "at":
       console.log("attacco");
-      setTimeout(atNuvola(nuvola, fulmine), 1000);
+      setTimeout(atNuvola(nuvola, fulmine), 10);
       nuvola.display="none"
       fulmine.display="none"
 
