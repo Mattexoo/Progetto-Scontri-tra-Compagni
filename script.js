@@ -383,6 +383,7 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 3:
+<<<<<<< HEAD
      if(scelta1==3 || scelta2==3){
       if(scelta1==3){
         vita1-=1;
@@ -395,6 +396,25 @@ function calcoloDanni( scelta1 ,scelta2){
         provaAnimazione2="ult";
         provaAnimazione1=" ";
       }
+=======
+     if (scelta1=1) {
+      vita1-=0;
+      vita2-=0;
+
+      provaAnimazione1="at";
+      provaAnimazione2="dif";
+
+
+     }else if(scelta1==3){
+      vita1-=1;
+      provaAnimazione1="ult";
+      vita2-=3;
+     }
+     else if(scelta2==3){
+      vita2-=1;
+      vita1-=3;
+      provaAnimazione2="dif";
+>>>>>>> parent of cf32285 (boh)
      }else{
       if(scelta1==1){
         vita1-=0;
@@ -493,7 +513,7 @@ function animazioni1(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difForza(forza), 10);
+      setTimeout(difForza, 10);
       forza.style.display = "none";
 
       provaAnimazione1=" ";
@@ -534,7 +554,7 @@ function animazioni2(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difAcciaio(acciaio), 10);
+      setTimeout(difAcciaio, 10);
       acciaio.style.display = "none";
 
       provaAnimazione2=" ";
@@ -556,7 +576,6 @@ function controlloVincita(){
   if (vita1<=0 || vita2 <=0) {
     
     window.open("classifica.html")
-    window.close("sceltaP.html")
 
 
   } else {
@@ -591,14 +610,14 @@ function atColpo(colpo){
 
   /*Difese*/
 
-function difForza(forza){
+function difForza(){
   forza.style.display ="block";
   forza.style.left= "23%";
   forza.style.top= "13%;";
   forza.style.animation = "Aniscudo1 1s linear";
 }
 
-function difAcciaio(acciaio){
+function difAcciaio(){
   acciaio.style.display ="block";
   acciaio.style.right = "26%";
   acciaio.style.top = "16.5%";
