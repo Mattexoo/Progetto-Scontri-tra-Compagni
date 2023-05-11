@@ -383,6 +383,11 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
 
     case 3:
+
+      
+
+
+
      if (scelta1=1) {
       vita1-=0;
       vita2-=0;
@@ -493,7 +498,7 @@ function animazioni1(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difForza, 10);
+      setTimeout(difForza(forza), 10);
       forza.style.display = "none";
 
       provaAnimazione1=" ";
@@ -534,7 +539,7 @@ function animazioni2(){
       break;
     case "dif":
       console.log("difesa");
-      setTimeout(difAcciaio, 10);
+      setTimeout(difAcciaio(acciaio), 10);
       acciaio.style.display = "none";
 
       provaAnimazione2=" ";
@@ -556,6 +561,7 @@ function controlloVincita(){
   if (vita1<=0 || vita2 <=0) {
     
     window.open("classifica.html")
+    window.close("sceltaP.html")
 
 
   } else {
@@ -590,14 +596,14 @@ function atColpo(){
 
   /*Difese*/
 
-function difForza(){
+function difForza(forza){
   forza.style.display ="block";
   forza.style.left= "23%";
   forza.style.top= "13%;";
   forza.style.animation = "Aniscudo1 1s linear ";
 }
 
-function difAcciaio(){
+function difAcciaio(acciaio){
   acciaio.style.display ="block";
   acciaio.style.right = "26%";
   acciaio.style.top = "16.5%";
