@@ -11,13 +11,8 @@ let bottoneP2;
 let bool1= false;
 let bool2= false;
 var tempo = 11;
-let timer10sec, timer1sec;
+let tempoImpiegato=0;
 
-const ATT=2;
-const DIF=2;
-const ULT=5;
-
-console.log(tempo);
 //generazione di un numero casuale da 0-3
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
@@ -229,8 +224,7 @@ function generaGame(){
         </div>
       </div>
       <div id="turno">
-        <h3>Tocca a:</h3>
-        <h1>Giocatore 1 / Giocatore 2</h1>
+        
       </div>
       <div id="schermo2">
         <article class="lifebar">
@@ -263,85 +257,113 @@ function generaGame(){
      htmlTitolo.innerHTML=c;
 }
 
-function gioco(){
-let btnAt1 = document.getElementById("attacco1");
-let btnAt2 = document.getElementById("attacco2");
-let btnDif1 = document.getElementById("difesa1");
-let btnDif2 = document.getElementById("difesa2");
-let btnUlt1 = document.getElementById("ulti1");
-let btnUlt2 = document.getElementById("ulti2");
 let scelta1=0;
 let scelta2=0;
 
-//mosse 1
-btnAt1.addEventListener("click",function(){
-  scelta1=1;
-});
-btnDif1.addEventListener("click",function(){
-  scelta1=2;
-});
-btnUlt1.addEventListener("click",function(){
-  scelta1=3;
-});
+function gioco(){
 
+  let mytimer=0;
 
-//mosse2
-btnAt2.addEventListener("click",function(){
-  scelta2=1;
-});
-btnDif2.addEventListener("click",function(){
-  scelta2=2;
-});
-btnUlt2.addEventListener("click",function(){
-  scelta2=3;
+  if (vita1 > 0 && vita2>0 ) {
 
-});
+    mytimer = setTimeout(avviaTimer(scelta1, scelta2), 13000);
 
-  setTimeout(avviaTimer(scelta1, scelta2), 13000);
+  } else {
 
-}
-let provaAnimazione1
-let provaAnimazione2
-function avviaTimer(scelta1 ,scelta2){
-  
-    setInterval(function(){
-  console.log("RESET");
-  console.log(tempo);
-
-  tempo--;
-  timerDiv.textContent = tempo;
-
-  if (tempo == 3) {
-    tempo = 14;
-
-    /* FINSCE IL TEMPO */
-    calcoloDanni(scelta1, scelta2);
-    animazioni();
-    generaGame();
-    controlloVincita();
-
-    /* ANIMAZIONE 1 ANIMAZIONE 2 */
+    clearTimeout(mytimer);
+    console
 
   }
-},1000)
+
+}
+
+
+
+function avviaTimer(scelta1 ,scelta2){
+ 
+  
+    setInterval(function(){
+
+      let provaAnimazione1 =" ";
+      let provaAnimazione2 =" ";
+      
+      let btnAt1 = document.getElementById("attacco1");
+      let btnAt2 = document.getElementById("attacco2");
+      let btnDif1 = document.getElementById("difesa1");
+      let btnDif2 = document.getElementById("difesa2");
+      let btnUlt1 = document.getElementById("ulti1");
+      let btnUlt2 = document.getElementById("ulti2");
+    
+    
+      //mosse 1
+      btnAt1.addEventListener("click",function(){
+        scelta1=1;
+        console.log(scelta1);
+
+      });
+      btnDif1.addEventListener("click",function(){
+        scelta1=2;
+        console.log(scelta1);
+
+      });
+      btnUlt1.addEventListener("click",function(){
+        scelta1=3;
+        console.log(scelta1);
+
+      });
+    
+    
+      //mosse2
+      btnAt2.addEventListener("click",function(){
+        scelta2=1;
+        console.log(scelta2);
+
+      });
+      btnDif2.addEventListener("click",function(){
+        scelta2=2;
+        console.log(scelta2);
+
+      });
+      btnUlt2.addEventListener("click",function(){
+        scelta2=3;
+        console.log(scelta2);
+
+    
+      });
+
+      console.log("RESET");
+
+  
+      tempo--;
+      timerDiv.textContent = tempo;
+  
+      if (tempo == 3 ) {
+        tempo = 14;
+  
+        /* FINSCE IL TEMPO */
+        calcoloDanni(scelta1, scelta2, provaAnimazione1, provaAnimazione2);
+        console.log(scelta1, scelta2)
+        animazioni1(provaAnimazione1);
+        animazioni2(provaAnimazione2);
+        generaGame();
+        controlloVincita();
+
+        provaAnimazione1 ="";
+        provaAnimazione2 ="";
+
+  
+        /* ANIMAZIONE 1 ANIMAZIONE 2 */
+  
+      }
+  },1000)
+  
+  tempoImpiegato++;
     
 }
 
-/*  /////////////////////////////////////////////////*/
 
-/* FUNZIONE CLASSIFICA DA FARE DOPO LA FINE DEL GIOCO*/
 
-//function risultato(){
-  //window.open("classifica.html");
-//}
-
-//function classifica(){
-  
-//}
-
-/* ///////////////////////////////////////////////// */
-
-function calcoloDanni( scelta1 ,scelta2){
+function calcoloDanni( scelta1 ,scelta2, provaAnimazione1, provaAnimazione2){
   
   
 
@@ -349,14 +371,23 @@ function calcoloDanni( scelta1 ,scelta2){
 
   switch (somma) {
 
+    case 0:
+      console.log("tasti non premuti")
+      vita1 -=0;
+      vita2-=0;
+
+      scelta1,scelta2 =0;
+      break;
+
     case 2:
-      provaAnimazione1="at1";
-      provaAnimazione2="at2";
+      provaAnimazione1="at";
+      provaAnimazione2="at";
 
       vita1-=2;
 
       vita2-=2;
 
+      
       break;
 
     case 3:
@@ -364,28 +395,25 @@ function calcoloDanni( scelta1 ,scelta2){
       vita1-=0;
       vita2-=0;
 
-      provaAnimazione1="at1";
-      provaAnimazione2="dif2";
+      provaAnimazione1="at";
+      provaAnimazione2="dif";
 
 
      }else{
       vita1-=0;
       vita2-=0;
 
-      provaAnimazione1="dif1";
-      provaAnimazione2="at2";
+      provaAnimazione1="dif";
+      provaAnimazione2="at";
 
      }
-
-
-
       break;
 
     case 4:
   
       if (scelta1==2 ) {
-        provaAnimazione1="dif1";
-        provaAnimazione2="dif2";
+        provaAnimazione1="dif";
+        provaAnimazione2="dif";
 
         vita1-=0;
 
@@ -396,12 +424,12 @@ function calcoloDanni( scelta1 ,scelta2){
         if (scelta1==1) {
 
           vita1-=5;
-          provaAnimazione1="ult2";
+          provaAnimazione2="ult";
 
         }else{
 
           vita2-=5;
-          provaAnimazione1="ult1";
+          provaAnimazione1="ult";
 
         }
       }
@@ -413,21 +441,21 @@ function calcoloDanni( scelta1 ,scelta2){
       if (scelta1==2) {
 
         vita1-=3;
-        provaAnimazione1="ult2";
-        provaAnimazione1="dif1";
+        provaAnimazione2="ult";
+        provaAnimazione1="dif";
 
       }else{
 
         vita2-=3;
-        provaAnimazione1="ult1";
-        provaAnimazione1="dif2";
+        provaAnimazione1="ult";
+        provaAnimazione2="dif";
       }
 
       break;
 
     case 6:
-      provaAnimazione1="ult2";
-      provaAnimazione1="ult1";
+      provaAnimazione1="ult";
+      provaAnimazione2="ult";
 
       vita1-=0;
 
@@ -440,30 +468,75 @@ function calcoloDanni( scelta1 ,scelta2){
       break;
   }
 
-}
+  console.log(vita1,vita2);
+  console.log(provaAnimazione1, provaAnimazione2);
 
-function animazioni(){
-switch(provaAnimazione){
-  case 1:
-    break;
-  case 2:
-    break;
-  case 3:
-    break;
-  case 4:
-    break;
-  case 5:
-    break;
-  case 6:
-    break;
-}
+  scelta1=0;
+  scelta2=0;
 
 }
 
+function animazioni1( provaAnimazione1){
+  switch(provaAnimazione1){
+    case "at":
+      console.log("gesu attacco");
+
+      break;
+    case "dif":
+      console.log("gesu difesa");
+
+      break;
+    case "ult":
+      console.log("gesu ulti");
+
+      break;
+    
+  } 
+}
+function animazioni2( provaAnimazione2){
+  switch(provaAnimazione2){
+    case "at":
+      console.log("madonna attacco");
+
+      break;
+    case "dif":
+      console.log("madonna difesa");
+
+      break;
+    case "ult":
+      console.log("madonna ulti");
+
+      break;
+    
+  }
+
+
+
+}
 
 
 function controlloVincita(){
 
-  console.log("ciao");
+  if (vita1<=0 || vita2 <=0) {
+    
+    window.open("./classifica.html")
+
+
+  } else {
+    console.log("sex");
+
+  }
+
 
 }
+
+
+
+
+
+
+function classifica(){
+  
+}
+
+/* ///////////////////////////////////////////////// */
