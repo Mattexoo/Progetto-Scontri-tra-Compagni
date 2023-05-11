@@ -352,6 +352,7 @@ function avviaTimer(scelta1 ,scelta2){
 }
 
 
+console.log("");
 
 function calcoloDanni( scelta1 ,scelta2){
   let somma = scelta1 + scelta2;
