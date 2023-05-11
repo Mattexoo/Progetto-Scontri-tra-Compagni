@@ -578,21 +578,23 @@ function controlloVincita(){
   }
 
 }
-function classifica(){
-      css=`<meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <!-- initial-scale è a 1.2 così lo zoom è settato a 120% -->
-     <meta name="viewport" content="width=device-width, initial-scale=1.2">
-     <script src="dati.js" defer ></script>
-     <script src="script.js" defer ></script>
-     <title>Robot War</title>
-     <link href="css/classi.css" rel="stylesheet" type="text/css"/>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>`
+let tabella= document.getElementById("tabella");
+function creaTab(){
+const oggi = new Date();
+const giorno = oggi.getDate();
+const mese = oggi.getMonth() + 1;
+const anno = oggi.getFullYear();
 
-     html=`
-     `
-}
+  tabella.innerHTML+= `<img src="${personaggio1}" height="400px" width="300px">`
+  tabella.innerHTML+= `<img src="${personaggio2}" height="400px" width="300px">`
+  if(vita1<=0){
+    let a= `OGGI, in data ${giorno}/${mese}/${anno} HA VINTO IL GIOCATORE 2`
+    tabella.innerText+=a
+  }else{
+    let a= `OGGI, in data ${giorno}/${mese}/${anno} HA VINTO IL GIOCATORE 1` 
+    tabella.innerText+=a
+  }
+} 
 
 /* ///////////////////////////////////////////////// */
 /* /////////////////////ANIMAZIONI////////////////// */
