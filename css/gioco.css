@@ -192,7 +192,7 @@ button:hover{
   transform: rotate(35deg);
 }
 
-#difesa2:hover + #scudo2{
+#difesa2:focus + #scudo2{
   display: block;
   animation: Aniscudo2 3s linear;
   animation-timing-function: linear;

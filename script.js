@@ -218,7 +218,7 @@ function generaGame(){
             <img id="scudo1" src="./img/animazioni/scudo-goldake-removebg-preview.png" alt="animazione non disponibile">
           </section>
           <section>
-            <button class="ulti" id="ulti1">ULTI</button>
+            <button disabled class="ulti" id="ulti1" >ULTI</button>
             <img  id="pugno" src="./img/animazioni/pugno-removebg-preview.png" alt="animazione non disponibile">
           </section>
         </div>
@@ -239,7 +239,7 @@ function generaGame(){
           <button id="difesa2" class="mossa">DIFESA</button>
           <img  id="scudo2" src="./img/animazioni/scudo-gundam-removebg-preview.png" alt="animazione non disponibile">
           <section>          
-            <button class="ulti" id="ulti2">ULTI</button>
+            <button disabled class="ulti" id="ulti2" >ULTI</button>
             <img id="spada" src="./img/animazioni/spada-removebg-preview.png" alt="animazione non disponibile">
           </section>
         </div>
@@ -266,7 +266,7 @@ function gioco(){
 
   if (vita1 > 0 && vita2>0 ) {
 
-    mytimer = setTimeout(avviaTimer(scelta1, scelta2), 13000);
+    mytimer = setTimeout(avviaTimer(scelta1, scelta2), 8000);
 
   } else {
 
@@ -277,16 +277,11 @@ function gioco(){
 
 }
 
-
-
-function avviaTimer(scelta1 ,scelta2){
- 
-  
-    setInterval(function(){
-
-      let provaAnimazione1 =" ";
-      let provaAnimazione2 =" ";
-      
+let provaAnimazione1 =" ";
+let provaAnimazione2 =" ";
+let ulti1 = document.getElementById("ulti1");
+function avviaTimer(scelta1 ,scelta2){ 
+  setInterval(function(){  
       let btnAt1 = document.getElementById("attacco1");
       let btnAt2 = document.getElementById("attacco2");
       let btnDif1 = document.getElementById("difesa1");
@@ -338,20 +333,17 @@ function avviaTimer(scelta1 ,scelta2){
       timerDiv.textContent = tempo;
   
       if (tempo == 3 ) {
-        tempo = 14;
+        tempo = 9;
   
         /* FINSCE IL TEMPO */
-        calcoloDanni(scelta1, scelta2, provaAnimazione1, provaAnimazione2);
+        calcoloDanni(scelta1, scelta2);
         console.log(scelta1, scelta2)
-        animazioni1(provaAnimazione1);
-        animazioni2(provaAnimazione2);
+        animazioni1();
+        animazioni2();
+        scelta1=0;
+        scelta2=0;
         generaGame();
         controlloVincita();
-
-        provaAnimazione1 ="";
-        provaAnimazione2 ="";
-
-  
         /* ANIMAZIONE 1 ANIMAZIONE 2 */
   
       }
@@ -363,7 +355,7 @@ function avviaTimer(scelta1 ,scelta2){
 
 
 
-function calcoloDanni( scelta1 ,scelta2, provaAnimazione1, provaAnimazione2){
+function calcoloDanni( scelta1 ,scelta2){
   
   
 
@@ -375,10 +367,16 @@ function calcoloDanni( scelta1 ,scelta2, provaAnimazione1, provaAnimazione2){
       console.log("tasti non premuti")
       vita1 -=0;
       vita2-=0;
-
-      scelta1,scelta2 =0;
       break;
-
+    case 1:
+      if(scelta1==0){
+        vita1-=2
+        provaAnimazione2="at";
+      }else{
+        vita2-=2
+        provaAnimazione1="at";
+      }
+      break;
     case 2:
       provaAnimazione1="at";
       provaAnimazione2="at";
@@ -399,6 +397,15 @@ function calcoloDanni( scelta1 ,scelta2, provaAnimazione1, provaAnimazione2){
       provaAnimazione2="dif";
 
 
+     }else if(scelta1==3){
+      vita1-=1;
+      provaAnimazione1="ult";
+      vita2-=3;
+     }
+     else if(scelta2==3){
+      vita2-=1;
+      vita1-=3;
+      provaAnimazione2="dif";
      }else{
       vita1-=0;
       vita2-=0;
@@ -467,51 +474,40 @@ function calcoloDanni( scelta1 ,scelta2, provaAnimazione1, provaAnimazione2){
 
       break;
   }
-
-  console.log(vita1,vita2);
-  console.log(provaAnimazione1, provaAnimazione2);
-
-  scelta1=0;
-  scelta2=0;
-
 }
 
-function animazioni1( provaAnimazione1){
+function animazioni1(){
   switch(provaAnimazione1){
     case "at":
       console.log("gesu attacco");
-
+      provaAnimazione1=" ";
       break;
     case "dif":
       console.log("gesu difesa");
-
+      provaAnimazione1=" ";
       break;
     case "ult":
       console.log("gesu ulti");
-
+      provaAnimazione1=" ";
       break;
-    
   } 
 }
-function animazioni2( provaAnimazione2){
+function animazioni2(){
   switch(provaAnimazione2){
     case "at":
       console.log("madonna attacco");
-
+      provaAnimazione2=" ";
       break;
     case "dif":
       console.log("madonna difesa");
-
+      provaAnimazione2=" ";
       break;
     case "ult":
       console.log("madonna ulti");
-
+      provaAnimazione2=" ";
       break;
     
   }
-
-
-
 }
 
 
@@ -519,7 +515,7 @@ function controlloVincita(){
 
   if (vita1<=0 || vita2 <=0) {
     
-    window.open("./classifica.html")
+    window.open("classifica.html")
 
 
   } else {
@@ -527,11 +523,7 @@ function controlloVincita(){
 
   }
 
-
 }
-
-
-
 
 
 
