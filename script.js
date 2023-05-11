@@ -468,10 +468,29 @@ function calcoloDanni( scelta1 ,scelta2){
   }
 }
 
+
 function animazioni1(){
+  /*inizializzazione delle variabili per le animazioni*/ 
+
+/*Attacchi*/
+let fulmine = document.getElementById("fulmine");
+let nuvola = document.getElementById("nuvola");
+let colpo = document.getElementById("colpo");
+
+/*Difese*/
+let scudo1 = document.getElementById("scudo1");
+let scudo2 = document.getElementById("scudo2");
+
+/*Ultimate*/
+let pugno = document.getElementById("pugno");
+let spada = document.getElementById("spada");
   switch(provaAnimazione1){
     case "at":
       console.log("gesu attacco");
+      setTimeout(pluto, 10);
+      nuvola.display="none"
+      fulmine.display="none"
+
       provaAnimazione1=" ";
       break;
     case "dif":
@@ -515,6 +534,15 @@ function controlloVincita(){
 
   }
 
+}
+function pluto(){
+  nuvola.style.display= "block";
+  nuvola.style.left= "62.5%";
+  nuvola.style.top= "0%;"
+  fulmine.style.display= "block";
+  fulmine.style.left= "70%";
+  nuvola.style.top= "10%;"
+  fulmine.style.animation= "Aniattacco1 1s linear";
 }
 
 
