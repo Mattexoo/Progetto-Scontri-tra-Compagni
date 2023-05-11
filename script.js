@@ -347,33 +347,27 @@ function avviaTimer(scelta1 ,scelta2){
         /* ANIMAZIONE 1 ANIMAZIONE 2 */
   
       }
-  },1000)
-  
-  tempoImpiegato++;
-    
+  },1000) 
+  tempoImpiegato++;  
 }
 
 
 
 function calcoloDanni( scelta1 ,scelta2){
-  
-  
-
-  let somma =scelta1 + scelta2;
-
+  let somma = scelta1 + scelta2;
   switch (somma) {
 
     case 0:
       console.log("tasti non premuti")
       vita1 -=0;
-      vita2-=0;
+      vita2 -=0;
       break;
     case 1:
       if(scelta1==0){
-        vita1-=2
+        vita1-=2;
         provaAnimazione2="at";
       }else{
-        vita2-=2
+        vita2-=2;
         provaAnimazione1="at";
       }
       break;
@@ -412,7 +406,6 @@ function calcoloDanni( scelta1 ,scelta2){
 
       provaAnimazione1="dif";
       provaAnimazione2="at";
-
      }
       break;
 
@@ -423,9 +416,7 @@ function calcoloDanni( scelta1 ,scelta2){
         provaAnimazione2="dif";
 
         vita1-=0;
-
         vita2-=0;
-
       }else{
 
         if (scelta1==1) {
@@ -448,7 +439,6 @@ function calcoloDanni( scelta1 ,scelta2){
     case 5:
       
       if (scelta1==2) {
-
         vita1-=2;
         vita2-=1
         provaAnimazione2="ult";
@@ -460,7 +450,6 @@ function calcoloDanni( scelta1 ,scelta2){
         provaAnimazione1="ult";
         provaAnimazione2="dif";
       }
-
       break;
 
     case 6:

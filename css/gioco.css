@@ -142,7 +142,7 @@ button:hover{
 /* Goldrake*/
 #attacco1:focus + #fulmine{
   display: block;
-  animation: attacco1 1s;
+  animation: Aniattacco1 1s;
   animation-timing-function: linear;
   left: 70%;
   top: 10%;   
@@ -158,7 +158,7 @@ button:hover{
 
 #ulti1:focus + #pugno{
   display: block;
-  animation: ulti1 1s infinite;
+  animation: Aniulti1 1s infinite;
   animation-timing-function: linear;
   animation-iteration-count: 3;
   left: 28%;
@@ -169,7 +169,7 @@ button:hover{
   display: block;
   left: 23%;
   top: 13%;
-  animation: scudo1 3s linear;
+  animation: Aniscudo1 3s linear;
   animation-timing-function: linear;
 }
 /* Gundam*/
@@ -178,13 +178,13 @@ button:hover{
   display: block;
   right: 30%;
   top: 37%;
-  animation: attacco2 1s linear;
+  animation: Aniattacco2 1s linear;
   animation-timing-function: linear;
 }
 
 #ulti2:focus + #spada{
   display: block;
-  animation: ulti2 1s linear;
+  animation: Aniulti2 1s linear;
   animation-timing-function: linear;
   animation-iteration-count: 3;
   right: 26%;
@@ -200,7 +200,7 @@ button:hover{
   top: 16.5%;   
 }
 
-@keyframes scudo1{ 
+@keyframes Aniscudo1{ 
   0%{   
     left: 21.5%;
     top: 40%;   
@@ -302,7 +302,7 @@ button:hover{
   }   
 }
 
-@keyframes attacco1{ 
+@keyframes Aniattacco1{ 
   0%{   
     left: 68%;
     top: 8%;   
@@ -354,7 +354,7 @@ button:hover{
 
 }
 
-@keyframes attacco2 {
+@keyframes Aniattacco2{
   0%{   
     right: 30%;
     top: 37%;  
@@ -398,7 +398,7 @@ button:hover{
   } 
 }
 
-@keyframes ulti1 {
+@keyframes Aniulti1{
   0%{   
     left: 28%;
     top: 38%;       
@@ -435,7 +435,7 @@ button:hover{
   }
 }
 
-@keyframes ulti2 {
+@keyframes Aniulti2{
   0%{   
     right: 26%;
     top: 35%;
@@ -479,6 +479,10 @@ button:hover{
         
   }
 }
+/********************************************************************************************************************************************/
+/********************************************************************************************************************************************/
+/********************************************************************************************************************************************/
+/********************************************************************************************************************************************/
 
   @media screen and (max-width: 768px){ 
 
