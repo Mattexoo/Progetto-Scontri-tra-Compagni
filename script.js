@@ -218,7 +218,7 @@ function generaGame(){
             <img id="scudo1" src="./img/animazioni/scudo-goldake-removebg-preview.png" alt="animazione non disponibile">
           </section>
           <section>
-            <button disabled class="ulti" id="ulti1" >ULTI</button>
+            <button class="ulti" id="ulti1" >ULTI</button>
             <img  id="pugno" src="./img/animazioni/pugno-removebg-preview.png" alt="animazione non disponibile">
           </section>
         </div>
@@ -239,7 +239,7 @@ function generaGame(){
           <button id="difesa2" class="mossa">DIFESA</button>
           <img  id="scudo2" src="./img/animazioni/scudo-gundam-removebg-preview.png" alt="animazione non disponibile">
           <section>          
-            <button disabled class="ulti" id="ulti2" >ULTI</button>
+            <button class="ulti" id="ulti2" >ULTI</button>
             <img id="spada" src="./img/animazioni/spada-removebg-preview.png" alt="animazione non disponibile">
           </section>
         </div>
@@ -430,12 +430,14 @@ function calcoloDanni( scelta1 ,scelta2){
 
         if (scelta1==1) {
 
-          vita1-=5;
+          vita1-=3;
+          vita2-=1;
           provaAnimazione2="ult";
 
         }else{
 
-          vita2-=5;
+          vita2-=3;
+          vita1-=1
           provaAnimazione1="ult";
 
         }
@@ -447,13 +449,14 @@ function calcoloDanni( scelta1 ,scelta2){
       
       if (scelta1==2) {
 
-        vita1-=3;
+        vita1-=2;
+        vita2-=1
         provaAnimazione2="ult";
         provaAnimazione1="dif";
 
       }else{
-
-        vita2-=3;
+        vita2-=2;
+        vita1-=1;
         provaAnimazione1="ult";
         provaAnimazione2="dif";
       }
@@ -464,9 +467,9 @@ function calcoloDanni( scelta1 ,scelta2){
       provaAnimazione1="ult";
       provaAnimazione2="ult";
 
-      vita1-=0;
+      vita1-=4;
 
-      vita2-=0;
+      vita2-=4;
 
       break;
   
