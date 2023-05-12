@@ -333,7 +333,7 @@ function avviaTimer(scelta1 ,scelta2){
       tempo-=1;
       cambiaTempo(tempo);
   
-      if (tempo == 3 ) {
+      if (tempo == 0 ) {
         tempo = 10;
   
         /* FINSCE IL TEMPO */
