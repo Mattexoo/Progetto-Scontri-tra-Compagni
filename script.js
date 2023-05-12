@@ -17,6 +17,10 @@ let tempoImpiegato=0;
 function personaggioCasuale(){
   return Math.floor(Math.random() * 4);
 }
+let pagina
+function apriSceltaP(){
+  pagina=window.open("sceltaP.html")
+}
 
 //creazione della pagina di scelta del personaggio e selezione di essi
 function sceltaPersonaggio(){    
@@ -401,7 +405,7 @@ function calcoloDanni( scelta1 ,scelta2){
           vita2 -=1;
 
           provaAnimazione1=" ";
-          provaAnimazione2="ult ";
+          provaAnimazione2="ult";
         }
 
       }else {
@@ -519,13 +523,9 @@ function animazioni1(){
   } 
 }
 
-function delay(ms, callback) {
-  setTimeout(callback, ms);
-}
-
 
 function animazioni2(){
-    /*inizializzazione delle variabili per le animazioni*/ 
+  /*inizializzazione delle variabili per le animazioni*/ 
 
   /*Attacchi*/
   let colpo = document.getElementById("colpo");
@@ -568,9 +568,8 @@ function controlloVincita(){
 
   if (vita1<=0 || vita2 <=0) {
     
-    window.open("classifica.html")
-    window.close("sceltaP.html")
-
+    let a= window.open("classifica.html")
+    pagina=window.close("sceltaP.html")
 
   } else {
     console.log("bello");
@@ -589,10 +588,10 @@ const anno = oggi.getFullYear();
   tabella.innerHTML+= `<img src="${personaggio2}" height="400px" width="300px">`
   if(vita1<=0){
     let a= `OGGI, in data ${giorno}/${mese}/${anno} HA VINTO IL GIOCATORE 2`
-    tabella.innerText+=a
+    tabella.innerText=a
   }else{
     let a= `OGGI, in data ${giorno}/${mese}/${anno} HA VINTO IL GIOCATORE 1` 
-    tabella.innerText+=a
+    tabella.innerText=a
   }
 } 
 
